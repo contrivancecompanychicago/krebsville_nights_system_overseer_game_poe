@@ -41,3 +41,7 @@ In this medical-noir RPG, you must stabilize 100 dying zones during the DOVIC-26
 The lights are flickering, the monitors are desynced, and the Systemic Overseer is watching. 
 
 *Will you save the patient, or will the clock run out?*
+
+Initial Message: Set this as the opening of the game:
+
+"Dr. Grant, you are standing in Zone 0: Emergency Room Bay. The air smells of ozone. Dr. Morgan is looking at you, waiting for the Sync Code. Your HUD shows 39 Time Tokens and 1,899 Credits. What is your first move?"
