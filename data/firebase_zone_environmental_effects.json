@@ -1,0 +1,622 @@
+[
+  {
+    "id": 1,
+    "zone_id": 1,
+    "effect_name": "Darkness"
+  },
+  {
+    "id": 2,
+    "zone_id": 1,
+    "effect_name": "Static_Discharge"
+  },
+  {
+    "id": 3,
+    "zone_id": 1,
+    "effect_name": "Static_Discharge"
+  },
+  {
+    "id": 23,
+    "zone_id": 2,
+    "effect_name": "Fog"
+  },
+  {
+    "id": 24,
+    "zone_id": 2,
+    "effect_name": "Alarm_Blaring"
+  },
+  {
+    "id": 40,
+    "zone_id": 3,
+    "effect_name": "Smoke"
+  },
+  {
+    "id": 50,
+    "zone_id": 4,
+    "effect_name": "Steam_Leak"
+  },
+  {
+    "id": 70,
+    "zone_id": 6,
+    "effect_name": "Chemical_Smell"
+  },
+  {
+    "id": 71,
+    "zone_id": 6,
+    "effect_name": "Alarm_Blaring"
+  },
+  {
+    "id": 96,
+    "zone_id": 8,
+    "effect_name": "Fog"
+  },
+  {
+    "id": 110,
+    "zone_id": 9,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 111,
+    "zone_id": 9,
+    "effect_name": "Biohazard_Warning"
+  },
+  {
+    "id": 124,
+    "zone_id": 10,
+    "effect_name": "Low_Oxygen"
+  },
+  {
+    "id": 4,
+    "zone_id": 11,
+    "effect_name": "Steam_Leak"
+  },
+  {
+    "id": 5,
+    "zone_id": 11,
+    "effect_name": "Darkness"
+  },
+  {
+    "id": 6,
+    "zone_id": 11,
+    "effect_name": "Water_Damage"
+  },
+  {
+    "id": 7,
+    "zone_id": 12,
+    "effect_name": "Steam_Leak"
+  },
+  {
+    "id": 8,
+    "zone_id": 12,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 9,
+    "zone_id": 13,
+    "effect_name": "Low_Oxygen"
+  },
+  {
+    "id": 10,
+    "zone_id": 13,
+    "effect_name": "Biohazard_Warning"
+  },
+  {
+    "id": 11,
+    "zone_id": 14,
+    "effect_name": "Flickering_Lights"
+  },
+  {
+    "id": 12,
+    "zone_id": 14,
+    "effect_name": "Static_Discharge"
+  },
+  {
+    "id": 13,
+    "zone_id": 14,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 14,
+    "zone_id": 16,
+    "effect_name": "Static_Discharge"
+  },
+  {
+    "id": 15,
+    "zone_id": 16,
+    "effect_name": "Static_Discharge"
+  },
+  {
+    "id": 16,
+    "zone_id": 16,
+    "effect_name": "Smoke"
+  },
+  {
+    "id": 17,
+    "zone_id": 17,
+    "effect_name": "Blood_Trail"
+  },
+  {
+    "id": 18,
+    "zone_id": 17,
+    "effect_name": "Rain"
+  },
+  {
+    "id": 19,
+    "zone_id": 18,
+    "effect_name": "Biohazard_Warning"
+  },
+  {
+    "id": 20,
+    "zone_id": 19,
+    "effect_name": "Static_Discharge"
+  },
+  {
+    "id": 21,
+    "zone_id": 19,
+    "effect_name": "Low_Oxygen"
+  },
+  {
+    "id": 22,
+    "zone_id": 19,
+    "effect_name": "Smoke"
+  },
+  {
+    "id": 25,
+    "zone_id": 23,
+    "effect_name": "Red_Alert_Lights"
+  },
+  {
+    "id": 26,
+    "zone_id": 23,
+    "effect_name": "Emergency_Lighting"
+  },
+  {
+    "id": 27,
+    "zone_id": 23,
+    "effect_name": "Rain"
+  },
+  {
+    "id": 28,
+    "zone_id": 24,
+    "effect_name": "Rain"
+  },
+  {
+    "id": 29,
+    "zone_id": 25,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 30,
+    "zone_id": 25,
+    "effect_name": "Darkness"
+  },
+  {
+    "id": 31,
+    "zone_id": 25,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 32,
+    "zone_id": 28,
+    "effect_name": "Emergency_Lighting"
+  },
+  {
+    "id": 33,
+    "zone_id": 28,
+    "effect_name": "Smoke"
+  },
+  {
+    "id": 34,
+    "zone_id": 28,
+    "effect_name": "Chemical_Smell"
+  },
+  {
+    "id": 35,
+    "zone_id": 29,
+    "effect_name": "Rain"
+  },
+  {
+    "id": 36,
+    "zone_id": 29,
+    "effect_name": "Water_Damage"
+  },
+  {
+    "id": 37,
+    "zone_id": 29,
+    "effect_name": "Blood_Trail"
+  },
+  {
+    "id": 38,
+    "zone_id": 30,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 39,
+    "zone_id": 30,
+    "effect_name": "Darkness"
+  },
+  {
+    "id": 41,
+    "zone_id": 31,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 42,
+    "zone_id": 33,
+    "effect_name": "Biohazard_Warning"
+  },
+  {
+    "id": 43,
+    "zone_id": 33,
+    "effect_name": "Darkness"
+  },
+  {
+    "id": 44,
+    "zone_id": 36,
+    "effect_name": "Red_Alert_Lights"
+  },
+  {
+    "id": 45,
+    "zone_id": 38,
+    "effect_name": "Rain"
+  },
+  {
+    "id": 46,
+    "zone_id": 38,
+    "effect_name": "Static_Discharge"
+  },
+  {
+    "id": 47,
+    "zone_id": 39,
+    "effect_name": "Rain"
+  },
+  {
+    "id": 48,
+    "zone_id": 39,
+    "effect_name": "Flickering_Lights"
+  },
+  {
+    "id": 49,
+    "zone_id": 40,
+    "effect_name": "Red_Alert_Lights"
+  },
+  {
+    "id": 51,
+    "zone_id": 43,
+    "effect_name": "Fog"
+  },
+  {
+    "id": 52,
+    "zone_id": 43,
+    "effect_name": "Low_Oxygen"
+  },
+  {
+    "id": 53,
+    "zone_id": 44,
+    "effect_name": "Smoke"
+  },
+  {
+    "id": 54,
+    "zone_id": 45,
+    "effect_name": "Chemical_Smell"
+  },
+  {
+    "id": 55,
+    "zone_id": 45,
+    "effect_name": "Flickering_Lights"
+  },
+  {
+    "id": 56,
+    "zone_id": 48,
+    "effect_name": "Sparking_Wires"
+  },
+  {
+    "id": 57,
+    "zone_id": 50,
+    "effect_name": "Chemical_Smell"
+  },
+  {
+    "id": 58,
+    "zone_id": 50,
+    "effect_name": "Blood_Trail"
+  },
+  {
+    "id": 59,
+    "zone_id": 50,
+    "effect_name": "Blood_Trail"
+  },
+  {
+    "id": 60,
+    "zone_id": 53,
+    "effect_name": "Emergency_Lighting"
+  },
+  {
+    "id": 61,
+    "zone_id": 55,
+    "effect_name": "Flickering_Lights"
+  },
+  {
+    "id": 62,
+    "zone_id": 56,
+    "effect_name": "Water_Damage"
+  },
+  {
+    "id": 63,
+    "zone_id": 57,
+    "effect_name": "Chemical_Smell"
+  },
+  {
+    "id": 64,
+    "zone_id": 57,
+    "effect_name": "Low_Oxygen"
+  },
+  {
+    "id": 65,
+    "zone_id": 59,
+    "effect_name": "Rain"
+  },
+  {
+    "id": 66,
+    "zone_id": 59,
+    "effect_name": "Red_Alert_Lights"
+  },
+  {
+    "id": 67,
+    "zone_id": 59,
+    "effect_name": "Alarm_Blaring"
+  },
+  {
+    "id": 68,
+    "zone_id": 60,
+    "effect_name": "Sparking_Wires"
+  },
+  {
+    "id": 69,
+    "zone_id": 60,
+    "effect_name": "Biohazard_Warning"
+  },
+  {
+    "id": 72,
+    "zone_id": 61,
+    "effect_name": "Steam_Leak"
+  },
+  {
+    "id": 73,
+    "zone_id": 62,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 74,
+    "zone_id": 62,
+    "effect_name": "Low_Oxygen"
+  },
+  {
+    "id": 75,
+    "zone_id": 62,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 76,
+    "zone_id": 63,
+    "effect_name": "Low_Oxygen"
+  },
+  {
+    "id": 77,
+    "zone_id": 63,
+    "effect_name": "Static_Discharge"
+  },
+  {
+    "id": 78,
+    "zone_id": 64,
+    "effect_name": "Steam_Leak"
+  },
+  {
+    "id": 79,
+    "zone_id": 66,
+    "effect_name": "Fog"
+  },
+  {
+    "id": 80,
+    "zone_id": 67,
+    "effect_name": "Alarm_Blaring"
+  },
+  {
+    "id": 81,
+    "zone_id": 68,
+    "effect_name": "Red_Alert_Lights"
+  },
+  {
+    "id": 82,
+    "zone_id": 68,
+    "effect_name": "Sparking_Wires"
+  },
+  {
+    "id": 83,
+    "zone_id": 69,
+    "effect_name": "Smoke"
+  },
+  {
+    "id": 84,
+    "zone_id": 69,
+    "effect_name": "Alarm_Blaring"
+  },
+  {
+    "id": 85,
+    "zone_id": 70,
+    "effect_name": "Low_Oxygen"
+  },
+  {
+    "id": 86,
+    "zone_id": 71,
+    "effect_name": "Darkness"
+  },
+  {
+    "id": 87,
+    "zone_id": 71,
+    "effect_name": "Low_Oxygen"
+  },
+  {
+    "id": 88,
+    "zone_id": 76,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 89,
+    "zone_id": 76,
+    "effect_name": "Red_Alert_Lights"
+  },
+  {
+    "id": 90,
+    "zone_id": 77,
+    "effect_name": "Chemical_Smell"
+  },
+  {
+    "id": 91,
+    "zone_id": 78,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 92,
+    "zone_id": 79,
+    "effect_name": "Emergency_Lighting"
+  },
+  {
+    "id": 93,
+    "zone_id": 79,
+    "effect_name": "Alarm_Blaring"
+  },
+  {
+    "id": 94,
+    "zone_id": 79,
+    "effect_name": "Sparking_Wires"
+  },
+  {
+    "id": 95,
+    "zone_id": 80,
+    "effect_name": "Emergency_Lighting"
+  },
+  {
+    "id": 97,
+    "zone_id": 82,
+    "effect_name": "Fog"
+  },
+  {
+    "id": 98,
+    "zone_id": 82,
+    "effect_name": "Chemical_Smell"
+  },
+  {
+    "id": 99,
+    "zone_id": 83,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 100,
+    "zone_id": 83,
+    "effect_name": "Static_Discharge"
+  },
+  {
+    "id": 101,
+    "zone_id": 83,
+    "effect_name": "Quarantine_Seal"
+  },
+  {
+    "id": 102,
+    "zone_id": 84,
+    "effect_name": "Blood_Trail"
+  },
+  {
+    "id": 103,
+    "zone_id": 85,
+    "effect_name": "Sparking_Wires"
+  },
+  {
+    "id": 104,
+    "zone_id": 86,
+    "effect_name": "Flickering_Lights"
+  },
+  {
+    "id": 105,
+    "zone_id": 86,
+    "effect_name": "Flickering_Lights"
+  },
+  {
+    "id": 106,
+    "zone_id": 86,
+    "effect_name": "Fog"
+  },
+  {
+    "id": 107,
+    "zone_id": 88,
+    "effect_name": "Static_Discharge"
+  },
+  {
+    "id": 108,
+    "zone_id": 89,
+    "effect_name": "Water_Damage"
+  },
+  {
+    "id": 109,
+    "zone_id": 89,
+    "effect_name": "Blood_Trail"
+  },
+  {
+    "id": 112,
+    "zone_id": 92,
+    "effect_name": "Biohazard_Warning"
+  },
+  {
+    "id": 113,
+    "zone_id": 92,
+    "effect_name": "Rain"
+  },
+  {
+    "id": 114,
+    "zone_id": 93,
+    "effect_name": "Fog"
+  },
+  {
+    "id": 115,
+    "zone_id": 94,
+    "effect_name": "Water_Damage"
+  },
+  {
+    "id": 116,
+    "zone_id": 94,
+    "effect_name": "Chemical_Smell"
+  },
+  {
+    "id": 117,
+    "zone_id": 95,
+    "effect_name": "Smoke"
+  },
+  {
+    "id": 118,
+    "zone_id": 96,
+    "effect_name": "Static_Discharge"
+  },
+  {
+    "id": 119,
+    "zone_id": 96,
+    "effect_name": "Water_Damage"
+  },
+  {
+    "id": 120,
+    "zone_id": 99,
+    "effect_name": "Smoke"
+  },
+  {
+    "id": 121,
+    "zone_id": 99,
+    "effect_name": "Biohazard_Warning"
+  },
+  {
+    "id": 122,
+    "zone_id": 100,
+    "effect_name": "Smoke"
+  },
+  {
+    "id": 123,
+    "zone_id": 100,
+    "effect_name": "Rain"
+  }
+]
