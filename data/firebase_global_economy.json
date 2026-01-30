@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "arp_credits": 4955,
+    "time_tokens": 46,
+    "difficulty_multiplier": 1.1,
+    "updated_at": "2025-10-13 20:52:53"
+  },
+  {
+    "id": 2,
+    "arp_credits": 4519,
+    "time_tokens": 43,
+    "difficulty_multiplier": 1.2,
+    "updated_at": "2025-10-23 20:52:53"
+  },
+  {
+    "id": 3,
+    "arp_credits": 4145,
+    "time_tokens": 40,
+    "difficulty_multiplier": 1.4,
+    "updated_at": "2025-11-02 20:52:53"
+  },
+  {
+    "id": 4,
+    "arp_credits": 3638,
+    "time_tokens": 37,
+    "difficulty_multiplier": 1.6,
+    "updated_at": "2025-11-12 20:52:53"
+  },
+  {
+    "id": 5,
+    "arp_credits": 3480,
+    "time_tokens": 39,
+    "difficulty_multiplier": 1.7,
+    "updated_at": "2025-11-22 20:52:53"
+  },
+  {
+    "id": 6,
+    "arp_credits": 3269,
+    "time_tokens": 36,
+    "difficulty_multiplier": 1.9,
+    "updated_at": "2025-12-02 20:52:53"
+  },
+  {
+    "id": 7,
+    "arp_credits": 2947,
+    "time_tokens": 36,
+    "difficulty_multiplier": 2.0,
+    "updated_at": "2025-12-12 20:52:53"
+  },
+  {
+    "id": 8,
+    "arp_credits": 2614,
+    "time_tokens": 33,
+    "difficulty_multiplier": 2.2,
+    "updated_at": "2025-12-22 20:52:53"
+  },
+  {
+    "id": 9,
+    "arp_credits": 2096,
+    "time_tokens": 34,
+    "difficulty_multiplier": 2.3,
+    "updated_at": "2026-01-01 20:52:53"
+  },
+  {
+    "id": 10,
+    "arp_credits": 1899,
+    "time_tokens": 36,
+    "difficulty_multiplier": 2.4,
+    "updated_at": "2026-01-11 20:52:53"
+  }
+]
