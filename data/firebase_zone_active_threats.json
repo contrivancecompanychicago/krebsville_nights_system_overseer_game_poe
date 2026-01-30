@@ -1,0 +1,562 @@
+[
+  {
+    "id": 1,
+    "zone_id": 3,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 2,
+    "zone_id": 4,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 3,
+    "zone_id": 4,
+    "threat_name": "Structural_Damage"
+  },
+  {
+    "id": 4,
+    "zone_id": 4,
+    "threat_name": "Power_Fluctuation"
+  },
+  {
+    "id": 5,
+    "zone_id": 6,
+    "threat_name": "Gas_Leak"
+  },
+  {
+    "id": 6,
+    "zone_id": 11,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 7,
+    "zone_id": 11,
+    "threat_name": "System_Malfunction"
+  },
+  {
+    "id": 8,
+    "zone_id": 11,
+    "threat_name": "Biohazard_Leak"
+  },
+  {
+    "id": 9,
+    "zone_id": 13,
+    "threat_name": "System_Malfunction"
+  },
+  {
+    "id": 10,
+    "zone_id": 14,
+    "threat_name": "Security_Breach"
+  },
+  {
+    "id": 11,
+    "zone_id": 15,
+    "threat_name": "Infected_Patient"
+  },
+  {
+    "id": 12,
+    "zone_id": 15,
+    "threat_name": "Toxic_Spill"
+  },
+  {
+    "id": 13,
+    "zone_id": 15,
+    "threat_name": "Toxic_Spill"
+  },
+  {
+    "id": 14,
+    "zone_id": 17,
+    "threat_name": "Hostile_Entity"
+  },
+  {
+    "id": 15,
+    "zone_id": 18,
+    "threat_name": "Containment_Breach"
+  },
+  {
+    "id": 16,
+    "zone_id": 18,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 17,
+    "zone_id": 18,
+    "threat_name": "Power_Fluctuation"
+  },
+  {
+    "id": 18,
+    "zone_id": 19,
+    "threat_name": "Infected_Patient"
+  },
+  {
+    "id": 19,
+    "zone_id": 19,
+    "threat_name": "Radiation_Warning"
+  },
+  {
+    "id": 20,
+    "zone_id": 20,
+    "threat_name": "System_Malfunction"
+  },
+  {
+    "id": 21,
+    "zone_id": 20,
+    "threat_name": "Biohazard_Leak"
+  },
+  {
+    "id": 22,
+    "zone_id": 21,
+    "threat_name": "Security_Breach"
+  },
+  {
+    "id": 23,
+    "zone_id": 21,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 24,
+    "zone_id": 23,
+    "threat_name": "Biohazard_Leak"
+  },
+  {
+    "id": 25,
+    "zone_id": 23,
+    "threat_name": "Toxic_Spill"
+  },
+  {
+    "id": 26,
+    "zone_id": 23,
+    "threat_name": "Toxic_Spill"
+  },
+  {
+    "id": 27,
+    "zone_id": 25,
+    "threat_name": "Hostile_Entity"
+  },
+  {
+    "id": 28,
+    "zone_id": 27,
+    "threat_name": "Containment_Breach"
+  },
+  {
+    "id": 29,
+    "zone_id": 27,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 30,
+    "zone_id": 28,
+    "threat_name": "Toxic_Spill"
+  },
+  {
+    "id": 31,
+    "zone_id": 28,
+    "threat_name": "Gas_Leak"
+  },
+  {
+    "id": 32,
+    "zone_id": 30,
+    "threat_name": "Radiation_Warning"
+  },
+  {
+    "id": 33,
+    "zone_id": 30,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 34,
+    "zone_id": 31,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 35,
+    "zone_id": 31,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 36,
+    "zone_id": 31,
+    "threat_name": "Power_Fluctuation"
+  },
+  {
+    "id": 37,
+    "zone_id": 32,
+    "threat_name": "Structural_Damage"
+  },
+  {
+    "id": 38,
+    "zone_id": 32,
+    "threat_name": "Biohazard_Leak"
+  },
+  {
+    "id": 39,
+    "zone_id": 33,
+    "threat_name": "Hostile_Entity"
+  },
+  {
+    "id": 40,
+    "zone_id": 33,
+    "threat_name": "Biohazard_Leak"
+  },
+  {
+    "id": 41,
+    "zone_id": 34,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 42,
+    "zone_id": 34,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 43,
+    "zone_id": 34,
+    "threat_name": "Gas_Leak"
+  },
+  {
+    "id": 44,
+    "zone_id": 35,
+    "threat_name": "Radiation_Warning"
+  },
+  {
+    "id": 45,
+    "zone_id": 35,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 46,
+    "zone_id": 38,
+    "threat_name": "Security_Breach"
+  },
+  {
+    "id": 47,
+    "zone_id": 39,
+    "threat_name": "Infected_Patient"
+  },
+  {
+    "id": 48,
+    "zone_id": 40,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 49,
+    "zone_id": 41,
+    "threat_name": "Hostile_Entity"
+  },
+  {
+    "id": 50,
+    "zone_id": 41,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 51,
+    "zone_id": 42,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 52,
+    "zone_id": 42,
+    "threat_name": "System_Malfunction"
+  },
+  {
+    "id": 53,
+    "zone_id": 43,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 54,
+    "zone_id": 46,
+    "threat_name": "Toxic_Spill"
+  },
+  {
+    "id": 55,
+    "zone_id": 47,
+    "threat_name": "Hostile_Entity"
+  },
+  {
+    "id": 56,
+    "zone_id": 47,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 57,
+    "zone_id": 48,
+    "threat_name": "Hostile_Entity"
+  },
+  {
+    "id": 58,
+    "zone_id": 49,
+    "threat_name": "Containment_Breach"
+  },
+  {
+    "id": 59,
+    "zone_id": 49,
+    "threat_name": "Toxic_Spill"
+  },
+  {
+    "id": 60,
+    "zone_id": 49,
+    "threat_name": "Gas_Leak"
+  },
+  {
+    "id": 61,
+    "zone_id": 52,
+    "threat_name": "Toxic_Spill"
+  },
+  {
+    "id": 62,
+    "zone_id": 53,
+    "threat_name": "Containment_Breach"
+  },
+  {
+    "id": 63,
+    "zone_id": 56,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 64,
+    "zone_id": 56,
+    "threat_name": "Containment_Breach"
+  },
+  {
+    "id": 65,
+    "zone_id": 58,
+    "threat_name": "Toxic_Spill"
+  },
+  {
+    "id": 66,
+    "zone_id": 60,
+    "threat_name": "Biohazard_Leak"
+  },
+  {
+    "id": 67,
+    "zone_id": 62,
+    "threat_name": "Security_Breach"
+  },
+  {
+    "id": 68,
+    "zone_id": 62,
+    "threat_name": "Structural_Damage"
+  },
+  {
+    "id": 69,
+    "zone_id": 63,
+    "threat_name": "Gas_Leak"
+  },
+  {
+    "id": 70,
+    "zone_id": 64,
+    "threat_name": "Security_Breach"
+  },
+  {
+    "id": 71,
+    "zone_id": 66,
+    "threat_name": "System_Malfunction"
+  },
+  {
+    "id": 72,
+    "zone_id": 68,
+    "threat_name": "Infected_Patient"
+  },
+  {
+    "id": 73,
+    "zone_id": 68,
+    "threat_name": "Hostile_Entity"
+  },
+  {
+    "id": 74,
+    "zone_id": 70,
+    "threat_name": "System_Malfunction"
+  },
+  {
+    "id": 75,
+    "zone_id": 70,
+    "threat_name": "Biohazard_Leak"
+  },
+  {
+    "id": 76,
+    "zone_id": 71,
+    "threat_name": "Structural_Damage"
+  },
+  {
+    "id": 77,
+    "zone_id": 73,
+    "threat_name": "Toxic_Spill"
+  },
+  {
+    "id": 78,
+    "zone_id": 73,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 79,
+    "zone_id": 73,
+    "threat_name": "Power_Fluctuation"
+  },
+  {
+    "id": 80,
+    "zone_id": 74,
+    "threat_name": "Infected_Patient"
+  },
+  {
+    "id": 81,
+    "zone_id": 74,
+    "threat_name": "Gas_Leak"
+  },
+  {
+    "id": 82,
+    "zone_id": 76,
+    "threat_name": "Hostile_Entity"
+  },
+  {
+    "id": 83,
+    "zone_id": 80,
+    "threat_name": "Radiation_Warning"
+  },
+  {
+    "id": 84,
+    "zone_id": 81,
+    "threat_name": "Radiation_Warning"
+  },
+  {
+    "id": 85,
+    "zone_id": 81,
+    "threat_name": "Power_Fluctuation"
+  },
+  {
+    "id": 86,
+    "zone_id": 81,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 87,
+    "zone_id": 82,
+    "threat_name": "Biohazard_Leak"
+  },
+  {
+    "id": 88,
+    "zone_id": 82,
+    "threat_name": "Security_Breach"
+  },
+  {
+    "id": 89,
+    "zone_id": 84,
+    "threat_name": "Security_Breach"
+  },
+  {
+    "id": 90,
+    "zone_id": 84,
+    "threat_name": "Security_Breach"
+  },
+  {
+    "id": 91,
+    "zone_id": 85,
+    "threat_name": "Structural_Damage"
+  },
+  {
+    "id": 92,
+    "zone_id": 86,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 93,
+    "zone_id": 86,
+    "threat_name": "System_Malfunction"
+  },
+  {
+    "id": 94,
+    "zone_id": 87,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 95,
+    "zone_id": 87,
+    "threat_name": "Structural_Damage"
+  },
+  {
+    "id": 96,
+    "zone_id": 87,
+    "threat_name": "Power_Fluctuation"
+  },
+  {
+    "id": 97,
+    "zone_id": 88,
+    "threat_name": "System_Malfunction"
+  },
+  {
+    "id": 98,
+    "zone_id": 88,
+    "threat_name": "Toxic_Spill"
+  },
+  {
+    "id": 99,
+    "zone_id": 89,
+    "threat_name": "Toxic_Spill"
+  },
+  {
+    "id": 100,
+    "zone_id": 89,
+    "threat_name": "Hostile_Entity"
+  },
+  {
+    "id": 101,
+    "zone_id": 91,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 102,
+    "zone_id": 92,
+    "threat_name": "Fire_Hazard"
+  },
+  {
+    "id": 103,
+    "zone_id": 92,
+    "threat_name": "Structural_Damage"
+  },
+  {
+    "id": 104,
+    "zone_id": 92,
+    "threat_name": "Structural_Damage"
+  },
+  {
+    "id": 105,
+    "zone_id": 95,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 106,
+    "zone_id": 95,
+    "threat_name": "Containment_Breach"
+  },
+  {
+    "id": 107,
+    "zone_id": 95,
+    "threat_name": "Gas_Leak"
+  },
+  {
+    "id": 108,
+    "zone_id": 96,
+    "threat_name": "Structural_Damage"
+  },
+  {
+    "id": 109,
+    "zone_id": 96,
+    "threat_name": "Power_Fluctuation"
+  },
+  {
+    "id": 110,
+    "zone_id": 98,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 111,
+    "zone_id": 100,
+    "threat_name": "Equipment_Failure"
+  },
+  {
+    "id": 112,
+    "zone_id": 100,
+    "threat_name": "System_Malfunction"
+  }
+]
