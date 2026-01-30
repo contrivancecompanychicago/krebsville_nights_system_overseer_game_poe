@@ -1,0 +1,2827 @@
+[
+  {
+    "id": 1,
+    "zone_key": "zone0_emergency_room_bay",
+    "name": "Emergency Room Bay",
+    "status": "OPEN",
+    "hazard_level": 0,
+    "active_npc": null,
+    "specialist_assigned": "Dr_Morgan",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": {
+      "vitals_stabilized": false,
+      "tech_override_hits": 2,
+      "monitor_sync_code": "SYNC-1561",
+      "current_patient": "SP-000"
+    },
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-07 13:52:53"
+  },
+  {
+    "id": 2,
+    "zone_key": "zone1_trauma_center",
+    "name": "Trauma Center",
+    "status": "CRITICAL",
+    "hazard_level": 2,
+    "active_npc": "Security_Automaton_02",
+    "specialist_assigned": "Nurse_Carter",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-07 04:52:53"
+  },
+  {
+    "id": 3,
+    "zone_key": "zone2_intensive_care_unit",
+    "name": "Intensive Care Unit",
+    "status": "LOCKED",
+    "hazard_level": 3,
+    "active_npc": null,
+    "specialist_assigned": "Nurse_Bailey",
+    "access_requirement": "SCL-19_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 45,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "LOCKED",
+        "type": "skill_check"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-08 07:52:53"
+  },
+  {
+    "id": 4,
+    "zone_key": "zone3_operating_theater",
+    "name": "Operating Theater",
+    "status": "SEALED",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-07 10:52:53"
+  },
+  {
+    "id": 5,
+    "zone_key": "zone4_surgical_prep_room",
+    "name": "Surgical Prep Room",
+    "status": "OPEN",
+    "hazard_level": 1,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "door_panel_1": {
+        "state": "DAMAGED",
+        "type": "minigame_trigger"
+      },
+      "monitor_2": {
+        "state": "OFFLINE",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": true,
+      "rescue_survivor": true,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-05 08:52:53"
+  },
+  {
+    "id": 6,
+    "zone_key": "zone5_recovery_ward",
+    "name": "Recovery Ward",
+    "status": "CRITICAL",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": true,
+      "rescue_survivor": false,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-07 14:52:53"
+  },
+  {
+    "id": 7,
+    "zone_key": "zone6_diagnostic_imaging",
+    "name": "Diagnostic Imaging",
+    "status": "LOCKED",
+    "hazard_level": 0,
+    "active_npc": "Dr_Chen",
+    "specialist_assigned": null,
+    "access_requirement": "SCL-23_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 43,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-10 18:52:53"
+  },
+  {
+    "id": 8,
+    "zone_key": "zone7_radiology_suite",
+    "name": "Radiology Suite",
+    "status": "SEALED",
+    "hazard_level": 0,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-02 18:52:53"
+  },
+  {
+    "id": 9,
+    "zone_key": "zone8_ct_scan_room",
+    "name": "CT Scan Room",
+    "status": "OPEN",
+    "hazard_level": 2,
+    "active_npc": null,
+    "specialist_assigned": "Dr_Grant",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "medical_device_1": {
+        "state": "DAMAGED",
+        "type": "minigame_trigger"
+      },
+      "power_switch_2": {
+        "state": "ACTIVE",
+        "type": "skill_check"
+      },
+      "power_switch_3": {
+        "state": "DAMAGED",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-02 04:52:53"
+  },
+  {
+    "id": 10,
+    "zone_key": "zone9_mri_chamber",
+    "name": "MRI Chamber",
+    "status": "CRITICAL",
+    "hazard_level": 1,
+    "active_npc": "Receptionist_AI",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "LOCKED",
+        "type": "skill_check"
+      },
+      "monitor_2": {
+        "state": "LOCKED",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": true,
+      "rescue_survivor": false,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-07 15:52:53"
+  },
+  {
+    "id": 11,
+    "zone_key": "zone10_laboratory",
+    "name": "Laboratory",
+    "status": "LOCKED",
+    "hazard_level": 3,
+    "active_npc": null,
+    "specialist_assigned": "Nurse_Carter",
+    "access_requirement": "SCL-15_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 20,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 16,
+      "tech_scraps": 13,
+      "medical_kits": 8,
+      "ammunition": 46
+    },
+    "triage_status": null,
+    "interactables": {
+      "door_panel_1": {
+        "state": "OFFLINE",
+        "type": "dialogue_trigger"
+      },
+      "medical_device_2": {
+        "state": "DAMAGED",
+        "type": "puzzle"
+      },
+      "terminal_3": {
+        "state": "DAMAGED",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-03 06:52:53"
+  },
+  {
+    "id": 12,
+    "zone_key": "zone11_pathology_lab",
+    "name": "Pathology Lab",
+    "status": "SEALED",
+    "hazard_level": 2,
+    "active_npc": null,
+    "specialist_assigned": "Nurse_Bailey",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "monitor_1": {
+        "state": "ACTIVE",
+        "type": "puzzle"
+      },
+      "power_switch_2": {
+        "state": "LOCKED",
+        "type": "puzzle"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-10 04:52:53"
+  },
+  {
+    "id": 13,
+    "zone_key": "zone12_blood_bank",
+    "name": "Blood Bank",
+    "status": "OPEN",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "power_switch_1": {
+        "state": "DAMAGED",
+        "type": "puzzle"
+      },
+      "monitor_2": {
+        "state": "LOCKED",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-02 16:52:53"
+  },
+  {
+    "id": 14,
+    "zone_key": "zone13_pharmacy",
+    "name": "Pharmacy",
+    "status": "CRITICAL",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 4,
+      "tech_scraps": 25,
+      "medical_kits": 0,
+      "ammunition": 14
+    },
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": true,
+      "collect_samples": false,
+      "rescue_survivor": true,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-07 01:52:53"
+  },
+  {
+    "id": 15,
+    "zone_key": "zone14_dispensary",
+    "name": "Dispensary",
+    "status": "LOCKED",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": "SCL-19_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 10,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "monitor_1": {
+        "state": "DAMAGED",
+        "type": "skill_check"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-04 02:52:53"
+  },
+  {
+    "id": 16,
+    "zone_key": "zone15_crash_cart_station",
+    "name": "Crash Cart Station",
+    "status": "SEALED",
+    "hazard_level": 1,
+    "active_npc": "Maintenance_Bot_Alpha",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 16,
+      "tech_scraps": 21,
+      "medical_kits": 8,
+      "ammunition": 41
+    },
+    "triage_status": null,
+    "interactables": {
+      "medical_device_1": {
+        "state": "ERRATIC",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-07 06:52:53"
+  },
+  {
+    "id": 17,
+    "zone_key": "zone16_emergency_room_bay",
+    "name": "Emergency Room Bay",
+    "status": "OPEN",
+    "hazard_level": 5,
+    "active_npc": "Orderly_Thompson",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": {
+      "vitals_stabilized": false,
+      "tech_override_hits": 0,
+      "monitor_sync_code": null,
+      "current_patient": "SP-016"
+    },
+    "interactables": {
+      "terminal_1": {
+        "state": "OFFLINE",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-03 09:52:53"
+  },
+  {
+    "id": 18,
+    "zone_key": "zone17_trauma_center",
+    "name": "Trauma Center",
+    "status": "CRITICAL",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 4,
+      "tech_scraps": 15,
+      "medical_kits": 4,
+      "ammunition": 27
+    },
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": true,
+      "collect_samples": false,
+      "rescue_survivor": false,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-07 23:52:53"
+  },
+  {
+    "id": 19,
+    "zone_key": "zone18_intensive_care_unit",
+    "name": "Intensive Care Unit",
+    "status": "LOCKED",
+    "hazard_level": 3,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": "SCL-16_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 10,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "door_panel_1": {
+        "state": "LOCKED",
+        "type": "dialogue_trigger"
+      },
+      "medical_device_2": {
+        "state": "LOCKED",
+        "type": "minigame_trigger"
+      },
+      "power_switch_3": {
+        "state": "ERRATIC",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-09 16:52:53"
+  },
+  {
+    "id": 20,
+    "zone_key": "zone19_operating_theater",
+    "name": "Operating Theater",
+    "status": "SEALED",
+    "hazard_level": 3,
+    "active_npc": "Maintenance_Bot_Alpha",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-07 12:52:53"
+  },
+  {
+    "id": 21,
+    "zone_key": "zone20_surgical_prep_room",
+    "name": "Surgical Prep Room",
+    "status": "OPEN",
+    "hazard_level": 5,
+    "active_npc": "Orderly_Thompson",
+    "specialist_assigned": "Nurse_Bailey",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-01 23:52:53"
+  },
+  {
+    "id": 22,
+    "zone_key": "zone21_recovery_ward",
+    "name": "Recovery Ward",
+    "status": "CRITICAL",
+    "hazard_level": 2,
+    "active_npc": "Maintenance_Bot_Alpha",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 11,
+      "tech_scraps": 0,
+      "medical_kits": 8,
+      "ammunition": 27
+    },
+    "triage_status": null,
+    "interactables": {
+      "power_switch_1": {
+        "state": "ACTIVE",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": true,
+      "rescue_survivor": true,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-05 16:52:53"
+  },
+  {
+    "id": 23,
+    "zone_key": "zone22_diagnostic_imaging",
+    "name": "Diagnostic Imaging",
+    "status": "LOCKED",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": "SCL-17_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 49,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-03 13:52:53"
+  },
+  {
+    "id": 24,
+    "zone_key": "zone23_radiology_suite",
+    "name": "Radiology Suite",
+    "status": "SEALED",
+    "hazard_level": 0,
+    "active_npc": "Tech_Specialist_Kim",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "monitor_1": {
+        "state": "LOCKED",
+        "type": "dialogue_trigger"
+      },
+      "power_switch_2": {
+        "state": "LOCKED",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-02 23:52:53"
+  },
+  {
+    "id": 25,
+    "zone_key": "zone24_ct_scan_room",
+    "name": "CT Scan Room",
+    "status": "OPEN",
+    "hazard_level": 3,
+    "active_npc": "Pharmacist_Lee",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-07 10:52:53"
+  },
+  {
+    "id": 26,
+    "zone_key": "zone25_mri_chamber",
+    "name": "MRI Chamber",
+    "status": "CRITICAL",
+    "hazard_level": 0,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": true,
+      "collect_samples": true,
+      "rescue_survivor": true,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-09 05:52:53"
+  },
+  {
+    "id": 27,
+    "zone_key": "zone26_laboratory",
+    "name": "Laboratory",
+    "status": "LOCKED",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": "Dr_Grant",
+    "access_requirement": "SCL-25_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 59,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 13,
+      "tech_scraps": 22,
+      "medical_kits": 4,
+      "ammunition": 20
+    },
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "LOCKED",
+        "type": "dialogue_trigger"
+      },
+      "terminal_2": {
+        "state": "ERRATIC",
+        "type": "skill_check"
+      },
+      "monitor_3": {
+        "state": "OFFLINE",
+        "type": "skill_check"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-11 08:52:53"
+  },
+  {
+    "id": 28,
+    "zone_key": "zone27_pathology_lab",
+    "name": "Pathology Lab",
+    "status": "SEALED",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": "Specialist_Wong",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-02 16:52:53"
+  },
+  {
+    "id": 29,
+    "zone_key": "zone28_blood_bank",
+    "name": "Blood Bank",
+    "status": "OPEN",
+    "hazard_level": 1,
+    "active_npc": null,
+    "specialist_assigned": "Specialist_Wong",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "ACTIVE",
+        "type": "puzzle"
+      },
+      "terminal_2": {
+        "state": "ERRATIC",
+        "type": "skill_check"
+      },
+      "medical_device_3": {
+        "state": "LOCKED",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-03 15:52:53"
+  },
+  {
+    "id": 30,
+    "zone_key": "zone29_pharmacy",
+    "name": "Pharmacy",
+    "status": "CRITICAL",
+    "hazard_level": 3,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-10 11:52:53"
+  },
+  {
+    "id": 31,
+    "zone_key": "zone30_dispensary",
+    "name": "Dispensary",
+    "status": "LOCKED",
+    "hazard_level": 3,
+    "active_npc": "Receptionist_AI",
+    "specialist_assigned": null,
+    "access_requirement": "SCL-11_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 19,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 14,
+      "tech_scraps": 21,
+      "medical_kits": 6,
+      "ammunition": 41
+    },
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "LOCKED",
+        "type": "skill_check"
+      },
+      "power_switch_2": {
+        "state": "ACTIVE",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-05 09:52:53"
+  },
+  {
+    "id": 32,
+    "zone_key": "zone31_crash_cart_station",
+    "name": "Crash Cart Station",
+    "status": "SEALED",
+    "hazard_level": 5,
+    "active_npc": "Receptionist_AI",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": false,
+      "rescue_survivor": false,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-11 09:52:53"
+  },
+  {
+    "id": 33,
+    "zone_key": "zone32_supply_corridor",
+    "name": "Supply Corridor",
+    "status": "OPEN",
+    "hazard_level": 3,
+    "active_npc": null,
+    "specialist_assigned": "Dr_Patel",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": true,
+      "rescue_survivor": true,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-11 09:52:53"
+  },
+  {
+    "id": 34,
+    "zone_key": "zone33_medical_storage",
+    "name": "Medical Storage",
+    "status": "CRITICAL",
+    "hazard_level": 3,
+    "active_npc": null,
+    "specialist_assigned": "Specialist_Wong",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "door_panel_1": {
+        "state": "OFFLINE",
+        "type": "dialogue_trigger"
+      },
+      "medical_device_2": {
+        "state": "DAMAGED",
+        "type": "skill_check"
+      },
+      "monitor_3": {
+        "state": "LOCKED",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-07 22:52:53"
+  },
+  {
+    "id": 35,
+    "zone_key": "zone34_equipment_room",
+    "name": "Equipment Room",
+    "status": "LOCKED",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": "SCL-28_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 24,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-05 18:52:53"
+  },
+  {
+    "id": 36,
+    "zone_key": "zone35_maintenance_bay",
+    "name": "Maintenance Bay",
+    "status": "SEALED",
+    "hazard_level": 1,
+    "active_npc": null,
+    "specialist_assigned": "Dr_Morgan",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-11 03:52:53"
+  },
+  {
+    "id": 37,
+    "zone_key": "zone36_generator_room",
+    "name": "Generator Room",
+    "status": "OPEN",
+    "hazard_level": 2,
+    "active_npc": "Receptionist_AI",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "monitor_1": {
+        "state": "ERRATIC",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": true,
+      "rescue_survivor": false,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-11 01:52:53"
+  },
+  {
+    "id": 38,
+    "zone_key": "zone37_hvac_control",
+    "name": "HVAC Control",
+    "status": "CRITICAL",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-09 23:52:53"
+  },
+  {
+    "id": 39,
+    "zone_key": "zone38_janitorial_closet",
+    "name": "Janitorial Closet",
+    "status": "LOCKED",
+    "hazard_level": 3,
+    "active_npc": null,
+    "specialist_assigned": "Specialist_Wong",
+    "access_requirement": "SCL-18_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 12,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 3,
+      "tech_scraps": 9,
+      "medical_kits": 5,
+      "ammunition": 20
+    },
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-01 23:52:53"
+  },
+  {
+    "id": 40,
+    "zone_key": "zone39_laundry_facility",
+    "name": "Laundry Facility",
+    "status": "SEALED",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "door_panel_1": {
+        "state": "OFFLINE",
+        "type": "skill_check"
+      },
+      "power_switch_2": {
+        "state": "ERRATIC",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": false,
+      "rescue_survivor": true,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-02 19:52:53"
+  },
+  {
+    "id": 41,
+    "zone_key": "zone40_waste_disposal",
+    "name": "Waste Disposal",
+    "status": "OPEN",
+    "hazard_level": 4,
+    "active_npc": "Dr_Ramirez",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "power_switch_1": {
+        "state": "DAMAGED",
+        "type": "skill_check"
+      },
+      "medical_device_2": {
+        "state": "OFFLINE",
+        "type": "skill_check"
+      },
+      "monitor_3": {
+        "state": "LOCKED",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": false,
+      "rescue_survivor": false,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-11 14:52:53"
+  },
+  {
+    "id": 42,
+    "zone_key": "zone41_morgue",
+    "name": "Morgue",
+    "status": "CRITICAL",
+    "hazard_level": 4,
+    "active_npc": "Guard_Martinez",
+    "specialist_assigned": "Specialist_Wong",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "monitor_1": {
+        "state": "ERRATIC",
+        "type": "skill_check"
+      }
+    },
+    "objectives": {
+      "secure_area": true,
+      "collect_samples": false,
+      "rescue_survivor": false,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-02 11:52:53"
+  },
+  {
+    "id": 43,
+    "zone_key": "zone42_cold_storage",
+    "name": "Cold Storage",
+    "status": "LOCKED",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": "SCL-21_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 29,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 8,
+      "tech_scraps": 8,
+      "medical_kits": 2,
+      "ammunition": 24
+    },
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "ACTIVE",
+        "type": "dialogue_trigger"
+      },
+      "medical_device_2": {
+        "state": "ERRATIC",
+        "type": "dialogue_trigger"
+      },
+      "terminal_3": {
+        "state": "OFFLINE",
+        "type": "puzzle"
+      }
+    },
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": false,
+      "rescue_survivor": false,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-02 17:52:53"
+  },
+  {
+    "id": 44,
+    "zone_key": "zone43_decontamination_chamber",
+    "name": "Decontamination Chamber",
+    "status": "SEALED",
+    "hazard_level": 1,
+    "active_npc": "Orderly_Thompson",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-04 08:52:53"
+  },
+  {
+    "id": 45,
+    "zone_key": "zone44_hazmat_storage",
+    "name": "Hazmat Storage",
+    "status": "OPEN",
+    "hazard_level": 0,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": false,
+      "rescue_survivor": true,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-10 04:52:53"
+  },
+  {
+    "id": 46,
+    "zone_key": "zone45_backup_power_station",
+    "name": "Backup Power Station",
+    "status": "CRITICAL",
+    "hazard_level": 3,
+    "active_npc": "Dr_Chen",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": false,
+      "rescue_survivor": false,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-11 16:52:53"
+  },
+  {
+    "id": 47,
+    "zone_key": "zone46_supply_corridor",
+    "name": "Supply Corridor",
+    "status": "LOCKED",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": "SCL-19_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 15,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 9,
+      "tech_scraps": 16,
+      "medical_kits": 9,
+      "ammunition": 48
+    },
+    "triage_status": null,
+    "interactables": {
+      "monitor_1": {
+        "state": "ERRATIC",
+        "type": "dialogue_trigger"
+      },
+      "power_switch_2": {
+        "state": "DAMAGED",
+        "type": "dialogue_trigger"
+      },
+      "terminal_3": {
+        "state": "ERRATIC",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-02 12:52:53"
+  },
+  {
+    "id": 48,
+    "zone_key": "zone47_medical_storage",
+    "name": "Medical Storage",
+    "status": "SEALED",
+    "hazard_level": 3,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 17,
+      "tech_scraps": 16,
+      "medical_kits": 8,
+      "ammunition": 5
+    },
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-04 16:52:53"
+  },
+  {
+    "id": 49,
+    "zone_key": "zone48_equipment_room",
+    "name": "Equipment Room",
+    "status": "OPEN",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-03 00:52:53"
+  },
+  {
+    "id": 50,
+    "zone_key": "zone49_maintenance_bay",
+    "name": "Maintenance Bay",
+    "status": "CRITICAL",
+    "hazard_level": 0,
+    "active_npc": "Maintenance_Bot_Alpha",
+    "specialist_assigned": "Specialist_Wong",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "OFFLINE",
+        "type": "puzzle"
+      },
+      "power_switch_2": {
+        "state": "DAMAGED",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-09 05:52:53"
+  },
+  {
+    "id": 51,
+    "zone_key": "zone50_generator_room",
+    "name": "Generator Room",
+    "status": "LOCKED",
+    "hazard_level": 0,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": "SCL-13_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 52,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-05 01:52:53"
+  },
+  {
+    "id": 52,
+    "zone_key": "zone51_hvac_control",
+    "name": "HVAC Control",
+    "status": "SEALED",
+    "hazard_level": 3,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 13,
+      "tech_scraps": 22,
+      "medical_kits": 2,
+      "ammunition": 11
+    },
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "ACTIVE",
+        "type": "minigame_trigger"
+      },
+      "terminal_2": {
+        "state": "LOCKED",
+        "type": "minigame_trigger"
+      },
+      "medical_device_3": {
+        "state": "ERRATIC",
+        "type": "puzzle"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-10 17:52:53"
+  },
+  {
+    "id": 53,
+    "zone_key": "zone52_janitorial_closet",
+    "name": "Janitorial Closet",
+    "status": "OPEN",
+    "hazard_level": 3,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "door_panel_1": {
+        "state": "DAMAGED",
+        "type": "skill_check"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-02 17:52:53"
+  },
+  {
+    "id": 54,
+    "zone_key": "zone53_laundry_facility",
+    "name": "Laundry Facility",
+    "status": "CRITICAL",
+    "hazard_level": 1,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "ERRATIC",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-10 10:52:53"
+  },
+  {
+    "id": 55,
+    "zone_key": "zone54_waste_disposal",
+    "name": "Waste Disposal",
+    "status": "LOCKED",
+    "hazard_level": 2,
+    "active_npc": "Guard_Martinez",
+    "specialist_assigned": "Specialist_Wong",
+    "access_requirement": "SCL-13_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 23,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "power_switch_1": {
+        "state": "DAMAGED",
+        "type": "minigame_trigger"
+      },
+      "monitor_2": {
+        "state": "LOCKED",
+        "type": "skill_check"
+      }
+    },
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": true,
+      "rescue_survivor": false,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-07 10:52:53"
+  },
+  {
+    "id": 56,
+    "zone_key": "zone55_morgue",
+    "name": "Morgue",
+    "status": "SEALED",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "monitor_1": {
+        "state": "DAMAGED",
+        "type": "dialogue_trigger"
+      },
+      "terminal_2": {
+        "state": "OFFLINE",
+        "type": "skill_check"
+      },
+      "medical_device_3": {
+        "state": "ERRATIC",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": {
+      "secure_area": true,
+      "collect_samples": true,
+      "rescue_survivor": true,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-03 18:52:53"
+  },
+  {
+    "id": 57,
+    "zone_key": "zone56_cold_storage",
+    "name": "Cold Storage",
+    "status": "OPEN",
+    "hazard_level": 2,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "power_switch_1": {
+        "state": "ACTIVE",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-06 03:52:53"
+  },
+  {
+    "id": 58,
+    "zone_key": "zone57_decontamination_chamber",
+    "name": "Decontamination Chamber",
+    "status": "CRITICAL",
+    "hazard_level": 5,
+    "active_npc": "Receptionist_AI",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-06 01:52:53"
+  },
+  {
+    "id": 59,
+    "zone_key": "zone58_hazmat_storage",
+    "name": "Hazmat Storage",
+    "status": "LOCKED",
+    "hazard_level": 1,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": "SCL-19_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 19,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-02 22:52:53"
+  },
+  {
+    "id": 60,
+    "zone_key": "zone59_backup_power_station",
+    "name": "Backup Power Station",
+    "status": "SEALED",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "ERRATIC",
+        "type": "skill_check"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-11 08:52:53"
+  },
+  {
+    "id": 61,
+    "zone_key": "zone60_security_office",
+    "name": "Security Office",
+    "status": "OPEN",
+    "hazard_level": 2,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 17,
+      "tech_scraps": 10,
+      "medical_kits": 3,
+      "ammunition": 15
+    },
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": true,
+      "collect_samples": true,
+      "rescue_survivor": true,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-03 20:52:53"
+  },
+  {
+    "id": 62,
+    "zone_key": "zone61_admin_wing",
+    "name": "Admin Wing",
+    "status": "CRITICAL",
+    "hazard_level": 5,
+    "active_npc": "Security_Automaton_02",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-08 03:52:53"
+  },
+  {
+    "id": 63,
+    "zone_key": "zone62_records_room",
+    "name": "Records Room",
+    "status": "LOCKED",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": "Specialist_Wong",
+    "access_requirement": "SCL-21_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 27,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "medical_device_1": {
+        "state": "DAMAGED",
+        "type": "dialogue_trigger"
+      },
+      "medical_device_2": {
+        "state": "DAMAGED",
+        "type": "minigame_trigger"
+      },
+      "power_switch_3": {
+        "state": "ACTIVE",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-03 03:52:53"
+  },
+  {
+    "id": 64,
+    "zone_key": "zone63_it_server_room",
+    "name": "IT Server Room",
+    "status": "SEALED",
+    "hazard_level": 4,
+    "active_npc": "Receptionist_AI",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "monitor_1": {
+        "state": "OFFLINE",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-11 08:52:53"
+  },
+  {
+    "id": 65,
+    "zone_key": "zone64_communications_hub",
+    "name": "Communications Hub",
+    "status": "OPEN",
+    "hazard_level": 2,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "DAMAGED",
+        "type": "puzzle"
+      },
+      "terminal_2": {
+        "state": "LOCKED",
+        "type": "skill_check"
+      },
+      "power_switch_3": {
+        "state": "LOCKED",
+        "type": "puzzle"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-02 00:52:53"
+  },
+  {
+    "id": 66,
+    "zone_key": "zone65_staff_lounge",
+    "name": "Staff Lounge",
+    "status": "CRITICAL",
+    "hazard_level": 3,
+    "active_npc": null,
+    "specialist_assigned": "Specialist_Wong",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-10 05:52:53"
+  },
+  {
+    "id": 67,
+    "zone_key": "zone66_break_room",
+    "name": "Break Room",
+    "status": "LOCKED",
+    "hazard_level": 1,
+    "active_npc": "Guard_Martinez",
+    "specialist_assigned": null,
+    "access_requirement": "SCL-26_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 43,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-05 20:52:53"
+  },
+  {
+    "id": 68,
+    "zone_key": "zone67_cafeteria",
+    "name": "Cafeteria",
+    "status": "SEALED",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-09 12:52:53"
+  },
+  {
+    "id": 69,
+    "zone_key": "zone68_reception_desk",
+    "name": "Reception Desk",
+    "status": "OPEN",
+    "hazard_level": 1,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 12,
+      "tech_scraps": 8,
+      "medical_kits": 5,
+      "ammunition": 24
+    },
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-07 11:52:53"
+  },
+  {
+    "id": 70,
+    "zone_key": "zone69_billing_office",
+    "name": "Billing Office",
+    "status": "CRITICAL",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 0,
+      "tech_scraps": 10,
+      "medical_kits": 0,
+      "ammunition": 30
+    },
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-08 03:52:53"
+  },
+  {
+    "id": 71,
+    "zone_key": "zone70_human_resources",
+    "name": "Human Resources",
+    "status": "LOCKED",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": "Specialist_Wong",
+    "access_requirement": "SCL-23_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 41,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 15,
+      "tech_scraps": 26,
+      "medical_kits": 1,
+      "ammunition": 7
+    },
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "OFFLINE",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-07 21:52:53"
+  },
+  {
+    "id": 72,
+    "zone_key": "zone71_director_office",
+    "name": "Director Office",
+    "status": "SEALED",
+    "hazard_level": 0,
+    "active_npc": "Orderly_Thompson",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-08 15:52:53"
+  },
+  {
+    "id": 73,
+    "zone_key": "zone72_conference_room",
+    "name": "Conference Room",
+    "status": "OPEN",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "power_switch_1": {
+        "state": "ERRATIC",
+        "type": "dialogue_trigger"
+      },
+      "monitor_2": {
+        "state": "DAMAGED",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-03 10:52:53"
+  },
+  {
+    "id": 74,
+    "zone_key": "zone73_observation_deck",
+    "name": "Observation Deck",
+    "status": "CRITICAL",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": "Dr_Foster",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 12,
+      "tech_scraps": 4,
+      "medical_kits": 0,
+      "ammunition": 23
+    },
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-11 13:52:53"
+  },
+  {
+    "id": 75,
+    "zone_key": "zone74_security_office",
+    "name": "Security Office",
+    "status": "LOCKED",
+    "hazard_level": 1,
+    "active_npc": "Receptionist_AI",
+    "specialist_assigned": null,
+    "access_requirement": "SCL-19_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 39,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "door_panel_1": {
+        "state": "OFFLINE",
+        "type": "skill_check"
+      }
+    },
+    "objectives": {
+      "secure_area": true,
+      "collect_samples": true,
+      "rescue_survivor": true,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-11 20:52:53"
+  },
+  {
+    "id": 76,
+    "zone_key": "zone75_admin_wing",
+    "name": "Admin Wing",
+    "status": "SEALED",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": "Specialist_Wong",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 12,
+      "tech_scraps": 27,
+      "medical_kits": 3,
+      "ammunition": 9
+    },
+    "triage_status": null,
+    "interactables": {
+      "medical_device_1": {
+        "state": "OFFLINE",
+        "type": "skill_check"
+      }
+    },
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": true,
+      "rescue_survivor": false,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-10 20:52:53"
+  },
+  {
+    "id": 77,
+    "zone_key": "zone76_records_room",
+    "name": "Records Room",
+    "status": "OPEN",
+    "hazard_level": 1,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 5,
+      "tech_scraps": 8,
+      "medical_kits": 7,
+      "ammunition": 3
+    },
+    "triage_status": null,
+    "interactables": {
+      "medical_device_1": {
+        "state": "OFFLINE",
+        "type": "minigame_trigger"
+      },
+      "door_panel_2": {
+        "state": "LOCKED",
+        "type": "skill_check"
+      }
+    },
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": false,
+      "rescue_survivor": true,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-03 01:52:53"
+  },
+  {
+    "id": 78,
+    "zone_key": "zone77_it_server_room",
+    "name": "IT Server Room",
+    "status": "CRITICAL",
+    "hazard_level": 1,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-03 17:52:53"
+  },
+  {
+    "id": 79,
+    "zone_key": "zone78_communications_hub",
+    "name": "Communications Hub",
+    "status": "LOCKED",
+    "hazard_level": 0,
+    "active_npc": "Nurse_Jenkins",
+    "specialist_assigned": null,
+    "access_requirement": "SCL-20_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 36,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "power_switch_1": {
+        "state": "LOCKED",
+        "type": "puzzle"
+      },
+      "medical_device_2": {
+        "state": "OFFLINE",
+        "type": "skill_check"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-03 18:52:53"
+  },
+  {
+    "id": 80,
+    "zone_key": "zone79_staff_lounge",
+    "name": "Staff Lounge",
+    "status": "SEALED",
+    "hazard_level": 3,
+    "active_npc": "Receptionist_AI",
+    "specialist_assigned": "Dr_Foster",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-05 22:52:53"
+  },
+  {
+    "id": 81,
+    "zone_key": "zone80_break_room",
+    "name": "Break Room",
+    "status": "OPEN",
+    "hazard_level": 3,
+    "active_npc": "Pharmacist_Lee",
+    "specialist_assigned": "Tech_Anderson",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "door_panel_1": {
+        "state": "DAMAGED",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": false,
+      "rescue_survivor": true,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-03 03:52:53"
+  },
+  {
+    "id": 82,
+    "zone_key": "zone81_cafeteria",
+    "name": "Cafeteria",
+    "status": "CRITICAL",
+    "hazard_level": 5,
+    "active_npc": "Admin_Clarke",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "medical_device_1": {
+        "state": "LOCKED",
+        "type": "puzzle"
+      },
+      "terminal_2": {
+        "state": "ACTIVE",
+        "type": "skill_check"
+      },
+      "terminal_3": {
+        "state": "ERRATIC",
+        "type": "puzzle"
+      }
+    },
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": false,
+      "rescue_survivor": true,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-08 15:52:53"
+  },
+  {
+    "id": 83,
+    "zone_key": "zone82_reception_desk",
+    "name": "Reception Desk",
+    "status": "LOCKED",
+    "hazard_level": 0,
+    "active_npc": null,
+    "specialist_assigned": "Nurse_Bailey",
+    "access_requirement": "SCL-23_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 44,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 19,
+      "tech_scraps": 20,
+      "medical_kits": 9,
+      "ammunition": 16
+    },
+    "triage_status": null,
+    "interactables": {
+      "monitor_1": {
+        "state": "LOCKED",
+        "type": "dialogue_trigger"
+      },
+      "door_panel_2": {
+        "state": "ACTIVE",
+        "type": "minigame_trigger"
+      },
+      "medical_device_3": {
+        "state": "OFFLINE",
+        "type": "skill_check"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-10 21:52:53"
+  },
+  {
+    "id": 84,
+    "zone_key": "zone83_billing_office",
+    "name": "Billing Office",
+    "status": "SEALED",
+    "hazard_level": 3,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "power_switch_1": {
+        "state": "LOCKED",
+        "type": "puzzle"
+      },
+      "power_switch_2": {
+        "state": "OFFLINE",
+        "type": "puzzle"
+      },
+      "terminal_3": {
+        "state": "LOCKED",
+        "type": "skill_check"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-03 18:52:53"
+  },
+  {
+    "id": 85,
+    "zone_key": "zone84_human_resources",
+    "name": "Human Resources",
+    "status": "OPEN",
+    "hazard_level": 4,
+    "active_npc": "Receptionist_AI",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "door_panel_1": {
+        "state": "LOCKED",
+        "type": "minigame_trigger"
+      },
+      "terminal_2": {
+        "state": "ACTIVE",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-07 21:52:53"
+  },
+  {
+    "id": 86,
+    "zone_key": "zone85_director_office",
+    "name": "Director Office",
+    "status": "CRITICAL",
+    "hazard_level": 5,
+    "active_npc": "Janitor_Rodriguez",
+    "specialist_assigned": "Dr_Grant",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-09 02:52:53"
+  },
+  {
+    "id": 87,
+    "zone_key": "zone86_conference_room",
+    "name": "Conference Room",
+    "status": "LOCKED",
+    "hazard_level": 3,
+    "active_npc": "Nurse_Jenkins",
+    "specialist_assigned": "Tech_Anderson",
+    "access_requirement": "SCL-26_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 11,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "monitor_1": {
+        "state": "ACTIVE",
+        "type": "puzzle"
+      }
+    },
+    "objectives": {
+      "secure_area": true,
+      "collect_samples": true,
+      "rescue_survivor": true,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-09 04:52:53"
+  },
+  {
+    "id": 88,
+    "zone_key": "zone87_observation_deck",
+    "name": "Observation Deck",
+    "status": "SEALED",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": "Nurse_Carter",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 17,
+      "tech_scraps": 12,
+      "medical_kits": 9,
+      "ammunition": 45
+    },
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-02 00:52:53"
+  },
+  {
+    "id": 89,
+    "zone_key": "zone88_patient_room",
+    "name": "Patient Room",
+    "status": "OPEN",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 10,
+      "tech_scraps": 23,
+      "medical_kits": 2,
+      "ammunition": 26
+    },
+    "triage_status": null,
+    "interactables": {
+      "terminal_1": {
+        "state": "DAMAGED",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-07 17:52:53"
+  },
+  {
+    "id": 90,
+    "zone_key": "zone89_isolation_unit",
+    "name": "Isolation Unit",
+    "status": "CRITICAL",
+    "hazard_level": 2,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-05 08:52:53"
+  },
+  {
+    "id": 91,
+    "zone_key": "zone90_quarantine_ward",
+    "name": "Quarantine Ward",
+    "status": "LOCKED",
+    "hazard_level": 4,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": "SCL-19_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 59,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-10 15:52:53"
+  },
+  {
+    "id": 92,
+    "zone_key": "zone91_waiting_room",
+    "name": "Waiting Room",
+    "status": "SEALED",
+    "hazard_level": 3,
+    "active_npc": "Admin_Clarke",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-02 07:52:53"
+  },
+  {
+    "id": 93,
+    "zone_key": "zone92_triage_area",
+    "name": "Triage Area",
+    "status": "OPEN",
+    "hazard_level": 0,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": {
+      "vitals_stabilized": false,
+      "tech_override_hits": 3,
+      "monitor_sync_code": "SYNC-173",
+      "current_patient": "SP-092"
+    },
+    "interactables": null,
+    "objectives": null,
+    "created_at": "2026-01-10 07:52:53"
+  },
+  {
+    "id": 94,
+    "zone_key": "zone93_burn_unit",
+    "name": "Burn Unit",
+    "status": "CRITICAL",
+    "hazard_level": 2,
+    "active_npc": null,
+    "specialist_assigned": "Dr_Foster",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": true,
+      "rescue_survivor": false,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-02 22:52:53"
+  },
+  {
+    "id": 95,
+    "zone_key": "zone94_pediatric_ward",
+    "name": "Pediatric Ward",
+    "status": "LOCKED",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": "SCL-16_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 18,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "medical_device_1": {
+        "state": "ERRATIC",
+        "type": "skill_check"
+      },
+      "door_panel_2": {
+        "state": "ERRATIC",
+        "type": "minigame_trigger"
+      },
+      "power_switch_3": {
+        "state": "OFFLINE",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-07 02:52:53"
+  },
+  {
+    "id": 96,
+    "zone_key": "zone95_maternity_ward",
+    "name": "Maternity Ward",
+    "status": "SEALED",
+    "hazard_level": 5,
+    "active_npc": null,
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "monitor_1": {
+        "state": "ERRATIC",
+        "type": "skill_check"
+      },
+      "terminal_2": {
+        "state": "ERRATIC",
+        "type": "dialogue_trigger"
+      },
+      "door_panel_3": {
+        "state": "LOCKED",
+        "type": "dialogue_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-11 05:52:53"
+  },
+  {
+    "id": 97,
+    "zone_key": "zone96_psychiatric_unit",
+    "name": "Psychiatric Unit",
+    "status": "OPEN",
+    "hazard_level": 2,
+    "active_npc": "Orderly_Thompson",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": true,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": true,
+      "collect_samples": true,
+      "rescue_survivor": true,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-03 01:52:53"
+  },
+  {
+    "id": 98,
+    "zone_key": "zone97_rehabilitation_center",
+    "name": "Rehabilitation Center",
+    "status": "CRITICAL",
+    "hazard_level": 4,
+    "active_npc": "Dr_Ramirez",
+    "specialist_assigned": null,
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": true,
+      "rescue_survivor": false,
+      "repair_systems": true
+    },
+    "created_at": "2026-01-03 21:52:53"
+  },
+  {
+    "id": 99,
+    "zone_key": "zone98_physical_therapy",
+    "name": "Physical Therapy",
+    "status": "LOCKED",
+    "hazard_level": 2,
+    "active_npc": "Maintenance_Bot_Alpha",
+    "specialist_assigned": null,
+    "access_requirement": "SCL-29_CODE",
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 35,
+      "playable": true,
+      "illumination": "NORMAL"
+    },
+    "inventory_state": {
+      "fluid_bolus_packs": 8,
+      "tech_scraps": 20,
+      "medical_kits": 3,
+      "ammunition": 45
+    },
+    "triage_status": null,
+    "interactables": null,
+    "objectives": {
+      "secure_area": false,
+      "collect_samples": false,
+      "rescue_survivor": true,
+      "repair_systems": false
+    },
+    "created_at": "2026-01-02 00:52:53"
+  },
+  {
+    "id": 100,
+    "zone_key": "zone99_oncology_wing",
+    "name": "Oncology Wing",
+    "status": "SEALED",
+    "hazard_level": 4,
+    "active_npc": "Janitor_Rodriguez",
+    "specialist_assigned": "Dr_Foster",
+    "access_requirement": null,
+    "scene_data": {
+      "unlocked": false,
+      "entry_cost": 0,
+      "playable": true,
+      "illumination": "DIM"
+    },
+    "inventory_state": null,
+    "triage_status": null,
+    "interactables": {
+      "medical_device_1": {
+        "state": "ACTIVE",
+        "type": "dialogue_trigger"
+      },
+      "monitor_2": {
+        "state": "LOCKED",
+        "type": "minigame_trigger"
+      }
+    },
+    "objectives": null,
+    "created_at": "2026-01-10 13:52:53"
+  }
+]
