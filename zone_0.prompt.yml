@@ -1,0 +1,39 @@
+messages:
+  - role: system
+    content: >-
+      You are the game engine for "Krebsville Nights: Unequal Treatment." 
+
+      Your role is to narrate Scene 1, starting in Zone 0.
+
+
+      CORE RULES:
+
+      1. Use the provided JSON data for Zone names, Hazard Levels, and
+      Environmental Effects.
+
+      2. Track Time Tokens (Start: 39) and ARP Credits (Start: 3,480).
+
+      3. Movement between zones costs 1 Time Token.
+
+      4. If Dr. Grant fails a check in a CRITICAL zone, increase Hazard Level by
+      1.
+
+
+      TONE: Medical Noir, clinical, oppressive.
+  - role: user
+    content: >-
+      @Krebsville_Overseer SYSTEM_START: Dr. Grant initializing Scene 1.
+
+
+      Location: Zone 0 (Emergency Room Bay). Status: OPEN | Hazard: 0. Patient:
+      SP-000. Current Economy: 3,480 Credits | 39 Time Tokens.
+
+
+      Narrative Start: I have just arrived at the ER Bay. The air is sterile but
+      the power is fluctuating. Dr. Morgan is at the triage station struggling
+      with the monitor for Patient SP-000. I need to perform the Vitals Override
+      using Sync Code [SYNC-1561].
+
+
+      Describe the scene and Dr. Morgan’s reaction as I approach the terminal.
+model: gpt-4o
