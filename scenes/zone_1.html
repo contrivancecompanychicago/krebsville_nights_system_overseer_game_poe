@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSINE HUD - Zone 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #050505; color: #00f2ff; font-family: 'Courier New', monospace; }
+        .critical-glow { text-shadow: 0 0 10px #ff0000; color: #ff4d4d; }
+        .scanline { background: linear-gradient(to bottom, rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); background-size: 100% 2px, 3px 100%; pointer-events: none; position: fixed; inset: 0; }
+    </style>
+</head>
+<body class="p-8">
+    <div class="scanline"></div>
+    <div class="max-w-4xl mx-auto border-2 border-red-900 p-6 bg-black/80 rounded-lg shadow-[0_0_20px_rgba(255,0,0,0.3)]">
+        <header class="flex justify-between items-center border-b border-red-900 pb-4 mb-6">
+            <div>
+                <h1 class="text-3xl font-bold uppercase tracking-widest critical-glow">Trauma Center (Zone 1)</h1>
+                <p class="text-xs text-red-500 font-bold">WARNING: SYSTEMIC DE-PRIORITIZATION IN EFFECT</p>
+            </div>
+            <div class="text-right">
+                <p class="text-sm">TIME TOKENS</p>
+                <p class="text-4xl font-black text-yellow-500">38</p>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-red-900/20 border border-red-500 p-4 rounded text-center">
+                <p class="text-xs">HAZARD LEVEL</p>
+                <p class="text-2xl font-bold">2 / 5</p>
+            </div>
+            <div class="bg-blue-900/20 border border-blue-500 p-4 rounded text-center">
+                <p class="text-xs">STATUS</p>
+                <p class="text-2xl font-bold italic">CRITICAL</p>
+            </div>
+            <div class="bg-yellow-900/20 border border-yellow-500 p-4 rounded text-center">
+                <p class="text-xs">CREDITS</p>
+                <p class="text-2xl font-bold">3,480</p>
+            </div>
+        </div>
+
+        <section class="border border-white/20 p-4 mb-6">
+            <h2 class="text-sm border-b border-white/20 mb-2 font-bold uppercase">Active Environmental Effects</h2>
+            <ul class="text-sm space-y-1">
+                <li class="flex justify-between"><span>🌑 Darkness</span> <span class="text-gray-500">VISIBILITY 10%</span></li>
+                <li class="flex justify-between"><span>⚡ Static Discharge</span> <span class="text-red-400 font-bold italic">VOLTAGE FLUCTUATING</span></li>
+            </ul>
+        </section>
+
+        <div class="text-center text-[10px] text-white/30 uppercase mt-8">
+            COSINE HUD v.2.6 // AUTHORIZED USER: DR. GRANT
+        </div>
+    </div>
+</body>
+</html>
