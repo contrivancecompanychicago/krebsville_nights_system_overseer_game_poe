@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSINE HUD - Zone 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #020205; color: #a855f7; font-family: 'Courier New', monospace; }
+        .alert-pulse { animation: pulse 2s infinite; color: #ff0055; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+        .scanline { background: linear-gradient(to bottom, rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%); background-size: 100% 4px; pointer-events: none; position: fixed; inset: 0; }
+    </style>
+</head>
+<body class="p-8">
+    <div class="scanline"></div>
+    <div class="max-w-4xl mx-auto border-2 border-purple-900 p-6 bg-black/90 rounded-lg shadow-[0_0_30px_rgba(168,85,247,0.2)]">
+        <header class="flex justify-between items-center border-b border-purple-900 pb-4 mb-6">
+            <div>
+                <h1 class="text-3xl font-bold uppercase tracking-widest text-purple-400">Oncology & Research (Zone 2)</h1>
+                <p class="text-xs alert-pulse font-bold">STATION ALERT: SECURITY BREACH DETECTED IN ZONE 1</p>
+            </div>
+            <div class="text-right">
+                <p class="text-sm">TIME TOKENS</p>
+                <p class="text-4xl font-black text-yellow-500">37</p>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-purple-900/20 border border-purple-500 p-4 rounded text-center">
+                <p class="text-xs text-purple-300">HAZARD LEVEL</p>
+                <p class="text-2xl font-bold">3 / 5</p>
+            </div>
+            <div class="bg-red-900/20 border border-red-500 p-4 rounded text-center">
+                <p class="text-xs text-red-300">COMPANION</p>
+                <p class="text-2xl font-bold italic text-white">NURSE CARTER</p>
+            </div>
+            <div class="bg-yellow-900/20 border border-yellow-500 p-4 rounded text-center">
+                <p class="text-xs text-yellow-300">CREDITS</p>
+                <p class="text-2xl font-bold">3,580</p>
+            </div>
+        </div>
+
+        <section class="border border-purple-500/30 p-4 mb-6 bg-purple-950/10">
+            <h2 class="text-sm border-b border-purple-500/30 mb-2 font-bold uppercase">Zone Protocols</h2>
+            <ul class="text-sm space-y-1">
+                <li class="flex justify-between"><span>☣️ Bio-Containment</span> <span class="text-purple-400 font-bold">ACTIVE</span></li>
+                <li class="flex justify-between"><span>👁️ Thermal Tracking</span> <span class="text-red-500 font-bold italic underline">SEARCHING...</span></li>
+            </ul>
+        </section>
+
+        <div class="text-center text-[10px] text-purple-500/40 uppercase mt-8">
+            SYSTEM STATUS: UNEQUAL TREATMENT PROTOCOL 02 ENFORCED
+        </div>
+    </div>
+</body>
+</html>
