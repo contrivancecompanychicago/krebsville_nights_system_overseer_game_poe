@@ -1,70 +1,105 @@
-<div class="min-h-screen bg-slate-900 text-slate-100 p-8 font-['Inter']">
-    <header class="max-w-6xl mx-auto flex justify-between items-center glass-card p-6 mb-8 border-b-2 border-green-500/50">
-        <div>
-            <h1 class="display-font text-3xl font-bold text-green-400">KREBSVILLE NIGHTS</h1><a href="../WIKI.md" class="text-xs text-blue-400 hover:underline px-2">Open System Wiki</a>            <p class="text-xs tracking-widest text-slate-400 uppercase">System Version: 1.1.0 | DOVIC Outbreak Phase 1</p>
-        </div>
-        <div class="flex gap-8 text-right">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSINE HUD - Zone 0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { 
+            background-color: #0f172a; 
+            color: #e2e8f0; 
+            font-family: 'Courier New', monospace; 
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+        .display-font {
+            font-family: 'Courier New', monospace;
+            font-weight: 700;
+        }
+        .scanline { 
+            background: linear-gradient(to bottom, rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%); 
+            background-size: 100% 4px; 
+            pointer-events: none; 
+            position: fixed; 
+            inset: 0; 
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="scanline"></div>
+    <div class="min-h-screen bg-slate-900 text-slate-100 p-8 font-['Inter']">
+        <header class="max-w-6xl mx-auto flex justify-between items-center glass-card p-6 mb-8 border-b-2 border-green-500/50">
             <div>
-                <p class="text-xs uppercase text-slate-500">ARP Credits</p>
-                <p class="text-2xl font-bold text-yellow-500">1,899</p>
+                <h1 class="display-font text-3xl font-bold text-green-400">KREBSVILLE NIGHTS</h1><a href="../WIKI.md" class="text-xs text-blue-400 hover:underline px-2">Open System Wiki</a>            <p class="text-xs tracking-widest text-slate-400 uppercase">System Version: 1.1.0 | DOVIC Outbreak Phase 1</p>
             </div>
-            <div>
-                <p class="text-xs uppercase text-slate-500">Time Tokens</p>
-                <p class="text-2xl font-bold text-blue-400">36</p>
+            <div class="flex gap-8 text-right">
+                <div>
+                    <p class="text-xs uppercase text-slate-500">ARP Credits</p>
+                    <p class="text-2xl font-bold text-yellow-500">1,899</p>
+                </div>
+                <div>
+                    <p class="text-xs uppercase text-slate-500">Time Tokens</p>
+                    <p class="text-2xl font-bold text-blue-400">36</p>
+                </div>
+                <div>
+                    <p class="text-xs uppercase text-slate-500">Multiplier</p>
+                    <p class="text-2xl font-bold text-red-500">2.4x</p>
+                </div>
             </div>
-            <div>
-                <p class="text-xs uppercase text-slate-500">Multiplier</p>
-                <p class="text-2xl font-bold text-red-500">2.4x</p>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <main class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <section class="md:col-span-2 glass-card p-8 border-l-4 border-green-500">
-            <h2 class="display-font text-4xl mb-4">Zone 0: Emergency Room Bay</h2>
-            <div class="flex gap-4 mb-6">
-                <span class="px-3 py-1 rounded-full bg-green-900/50 text-green-400 border border-green-500 text-sm">STATUS: OPEN</span>
-                <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-600 text-sm">HAZARD: 0</span>
-            </div>
-            <p class="text-slate-400 mb-8 leading-relaxed">
-                The primary intake hub for the sector. While current hazard levels are nominal, the systemic redirection of resources has left the monitoring equipment in a state of chronic desync.
-            </p>
+        <main class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <div class="bg-black/30 p-6 rounded-lg border border-slate-700">
-                <h3 class="text-sm font-bold text-slate-500 uppercase mb-4 tracking-tighter">Active Triage: Patient SP-000</h3>
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-lg">Monitor Sync Required</p>
-                        <p class="text-xs text-green-500 font-mono">CODE: SYNC-1561</p>
+            <section class="md:col-span-2 glass-card p-8 border-l-4 border-green-500">
+                <h2 class="display-font text-4xl mb-4">Zone 0: Emergency Room Bay</h2>
+                <div class="flex gap-4 mb-6">
+                    <span class="px-3 py-1 rounded-full bg-green-900/50 text-green-400 border border-green-500 text-sm">STATUS: OPEN</span>
+                    <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-600 text-sm">HAZARD: 0</span>
+                </div>
+                <p class="text-slate-400 mb-8 leading-relaxed">
+                    The primary intake hub for the sector. While current hazard levels are nominal, the systemic redirection of resources has left the monitoring equipment in a state of chronic desync.
+                </p>
+                
+                <div class="bg-black/30 p-6 rounded-lg border border-slate-700">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase mb-4 tracking-tighter">Active Triage: Patient SP-000</h3>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-lg">Monitor Sync Required</p>
+                            <p class="text-xs text-green-500 font-mono">CODE: SYNC-1561</p>
+                        </div>
+                        <button class="bg-green-600 hover:bg-green-500 text-white px-6 py-2 rounded font-bold transition-all shadow-[0_0_15px_rgba(34,197,94,0.4)]">
+                            INITIATE OVERRIDE
+                        </button>
                     </div>
-                    <button class="bg-green-600 hover:bg-green-500 text-white px-6 py-2 rounded font-bold transition-all shadow-[0_0_15px_rgba(34,197,94,0.4)]">
-                        INITIATE OVERRIDE
-                    </button>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <aside class="space-y-6">
-            <div class="glass-card p-6">
-                <h3 class="text-xs font-bold text-slate-500 uppercase mb-3">Specialist on Site</h3>
-                <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center border border-slate-500">M</div>
-                    <p class="font-bold text-slate-200">Dr. Morgan</p>
+            <aside class="space-y-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-xs font-bold text-slate-500 uppercase mb-3">Specialist on Site</h3>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center border border-slate-500">M</div>
+                        <p class="font-bold text-slate-200">Dr. Morgan</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="glass-card p-6 border-l-4 border-yellow-500">
-                <h3 class="text-xs font-bold text-slate-500 uppercase mb-3">Environmental Data</h3>
-                <ul class="text-sm space-y-2">
-                    <li class="flex items-center gap-2 text-yellow-400">
-                        <span>⚠️</span> Light Fog Detected
-                    </li>
-                    <li class="flex items-center gap-2 text-slate-400">
-                        <span>☀️</span> Normal Illumination
-                    </li>
-                </ul>
-            </div>
-        </aside>
-    </main>
-</div>
+                <div class="glass-card p-6 border-l-4 border-yellow-500">
+                    <h3 class="text-xs font-bold text-slate-500 uppercase mb-3">Environmental Data</h3>
+                    <ul class="text-sm space-y-2">
+                        <li class="flex items-center gap-2 text-yellow-400">
+                            <span>⚠️</span> Light Fog Detected
+                        </li>
+                        <li class="flex items-center gap-2 text-slate-400">
+                            <span>☀️</span> Normal Illumination
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
