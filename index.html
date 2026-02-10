@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Krebsville Nights: Unequal Treatment | COSINE MUD</title>
+  <title>Krebsville Nights: Unequal Treatment | A Medical Noir RPG</title>
   
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -11,242 +11,405 @@
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   
-  <!-- Custom Styles: CRT effects, glitch, glow -->
-  <link rel="stylesheet" href="styles.css">
-  
   <style>
-    /* Inline fallback styles */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Courier+Prime:wght@400;700&display=swap');
+    
     body {
       background-color: #0a0e27;
       color: #e0e6ff;
-      font-family: 'Courier New', monospace;
-      overflow: hidden;
+      font-family: 'Courier Prime', monospace;
+      overflow-x: hidden;
     }
     
-    .game-container {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+    .title-font {
+      font-family: 'Orbitron', sans-serif;
+    }
+    
+    /* Neon glow effects */
+    .neon-violet {
+      color: #a78bfa;
+      text-shadow: 0 0 10px rgba(167, 139, 250, 0.8),
+                   0 0 20px rgba(167, 139, 250, 0.5),
+                   0 0 30px rgba(167, 139, 250, 0.3);
+    }
+    
+    .neon-pink {
+      color: #f472b6;
+      text-shadow: 0 0 10px rgba(244, 114, 182, 0.8),
+                   0 0 20px rgba(244, 114, 182, 0.5),
+                   0 0 30px rgba(244, 114, 182, 0.3);
+    }
+    
+    .neon-red {
+      color: #ef4444;
+      text-shadow: 0 0 10px rgba(239, 68, 68, 0.8),
+                   0 0 20px rgba(239, 68, 68, 0.5),
+                   0 0 30px rgba(239, 68, 68, 0.3);
+    }
+    
+    /* CRT scanline effect */
+    .scanlines {
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      pointer-events: none;
+    }
+    
+    /* Glitch effect on hover */
+    .glitch:hover {
+      animation: glitch 0.3s infinite;
+    }
+    
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(-2px, -2px); }
+      60% { transform: translate(2px, 2px); }
+      80% { transform: translate(2px, -2px); }
+      100% { transform: translate(0); }
+    }
+    
+    /* Pulse animation */
+    .pulse-glow {
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    /* Button styles */
+    .cta-button {
+      position: relative;
+      background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+      border: 2px solid #a78bfa;
+      padding: 1rem 3rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(167, 139, 250, 0.5),
+                  inset 0 0 20px rgba(167, 139, 250, 0.1);
+    }
+    
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(167, 139, 250, 0.8),
+                  0 0 50px rgba(236, 72, 153, 0.5),
+                  inset 0 0 30px rgba(167, 139, 250, 0.2);
+    }
+    
+    /* Feature cards */
+    .feature-card {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(167, 139, 250, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      border-color: rgba(167, 139, 250, 0.8);
+      box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
+      transform: translateY(-5px);
+    }
+    
+    /* Flicker animation for hazard warning */
+    .flicker {
+      animation: flicker 3s infinite;
+    }
+    
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        opacity: 0.4;
+      }
     }
   </style>
 </head>
 <body class="bg-slate-950">
-  <div id="app" class="relative min-h-screen flex flex-col justify-between game-container">
+  
+  <!-- CRT Scanline Overlay -->
+  <div class="fixed inset-0 z-50 scanlines pointer-events-none" style="mix-blend-mode: screen; opacity: 0.05;"></div>
+  
+  <!-- Main Container -->
+  <div class="min-h-screen relative">
     
-    <!-- ============ HUD TOP BAR ============ -->
-    <header class="hud-top flex items-center justify-between px-8 py-4 border-b border-pink-600/60 bg-gradient-to-b from-black/80 to-transparent z-20">
-      <!-- Left: Game Title -->
-      <div class="flex items-center space-x-3">
-        <div class="text-xl font-bold tracking-wider">
-          <span class="neon-violet">KREBSVILLE</span>
-          <span class="text-pink-400 ml-1">NIGHTS</span>
-        </div>
-        <span class="text-xs text-violet-400 border-l border-violet-600 pl-3">System v1.1.0 | COSINE MUD</span>
-      </div>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center px-6 py-12 overflow-hidden">
       
-      <!-- Right: Game Stats -->
-      <div class="flex items-center space-x-8 text-sm">
-        <!-- Time Tokens -->
-        <div class="hud-stat flex items-center space-x-1">
-          <i data-lucide="hourglass" class="w-4 h-4 neon-violet"></i>
-          <span class="text-slate-300">Tokens:</span>
-          <span id="hud-timeTokens" class="neon-violet font-bold">37</span>
-        </div>
-        
-        <!-- Credits -->
-        <div class="hud-stat flex items-center space-x-1">
-          <i data-lucide="coins" class="w-4 h-4 neon-pink"></i>
-          <span class="text-slate-300">Credits:</span>
-          <span id="hud-credits" class="neon-pink font-bold">3480</span>
-        </div>
-        
-        <!-- Hazard Level -->
-        <div class="hud-stat flex items-center space-x-1">
-          <i data-lucide="alert-triangle" class="w-4 h-4 text-red-400"></i>
-          <span class="text-slate-300">Hazard:</span>
-          <span id="hud-hazardLevel" class="font-bold text-red-400">4</span>
-          <span class="text-slate-500">/5</span>
-        </div>
-        
-        <!-- Current Zone -->
-        <div class="hud-stat flex items-center space-x-1 border-l border-violet-700 pl-4">
-          <i data-lucide="map-pin" class="w-4 h-4 text-violet-400"></i>
-          <span id="hud-currentZone" class="text-violet-300 font-mono text-xs">Oncology_Research</span>
-        </div>
-      </div>
-    </header>
-
-    <!-- ============ MAIN GAME AREA ============ -->
-    <main class="game-main flex-grow flex flex-col items-center justify-start py-12 px-6 overflow-y-auto">
+      <!-- Background grid effect -->
+      <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(167, 139, 250, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(167, 139, 250, 0.3) 1px, transparent 1px); background-size: 50px 50px;"></div>
       
-      <!-- Zone/Room Header -->
-      <section class="w-full max-w-3xl mb-10">
-        <h1 id="zone-title" class="text-4xl font-bold neon-violet tracking-widest uppercase text-center mb-3">
-          Genetic Sequencing Hub
+      <!-- Content -->
+      <div class="relative z-10 max-w-5xl w-full text-center">
+        
+        <!-- System Status Header -->
+        <div class="mb-8 flex items-center justify-center space-x-2 text-xs uppercase tracking-widest flex-wrap">
+          <span class="text-red-500 flicker">●</span>
+          <span class="text-slate-400">SYSTEM STATUS:</span>
+          <span class="neon-red">CRITICAL</span>
+          <span class="text-slate-600">|</span>
+          <span class="text-slate-400">DOVIC-26 OUTBREAK</span>
+          <span class="text-slate-600">|</span>
+          <span class="text-slate-400">WASTE ZONE PROTOCOL ACTIVE</span>
+        </div>
+        
+        <!-- Main Title -->
+        <h1 class="title-font text-6xl md:text-8xl font-black mb-4 leading-tight">
+          <span class="neon-violet glitch">KREBSVILLE</span>
+          <br>
+          <span class="neon-pink glitch">NIGHTS</span>
         </h1>
-        <div class="h-1 w-24 mx-auto bg-gradient-to-r from-violet-600 to-pink-600 rounded mb-6"></div>
-      </section>
-
-      <!-- Zone/Room Description -->
-      <section class="w-full max-w-3xl mb-8">
-        <p id="zone-desc" class="text-slate-200 text-center leading-relaxed text-base">
-          Hazy with smoke and the ozone reek of subterranean machinery. Violet neon flickers behind damaged CRT screens, casting ghostly shadows across banks of genetic sequencing equipment. The hum reverberates through your bones. Dr. Grant crouches in the narrow vents, scanning for a safe path forward. The air tastes of copper and chemical vapor.
+        
+        <!-- Subtitle -->
+        <div class="mb-6">
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-300 mb-2">
+            Unequal Treatment
+          </h2>
+          <div class="h-1 w-48 mx-auto bg-gradient-to-r from-violet-600 via-pink-600 to-violet-600 rounded"></div>
+        </div>
+        
+        <!-- Tagline -->
+        <p class="text-xl md:text-2xl text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed">
+          A Medical Noir RPG where the algorithm decides who lives and who dies.
         </p>
-      </section>
-
-      <!-- Environmental Status Indicators -->
-      <section class="w-full max-w-3xl mb-10 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="border border-violet-600/50 bg-violet-900/10 p-4 rounded text-center">
-          <p class="text-xs text-violet-400 uppercase tracking-wider mb-1">Light Level</p>
-          <p id="env-light" class="text-lg font-bold neon-violet">HAZY</p>
+        
+        <!-- Story Hook -->
+        <div class="bg-black/40 border border-violet-600/40 rounded-lg p-8 mb-12 max-w-3xl mx-auto">
+          <p class="text-slate-300 leading-relaxed mb-4">
+            You are <span class="neon-violet font-bold">Dr. Grant</span>, a medical specialist trapped in the Waste Zones during the <span class="text-red-400">DOVIC-26 outbreak</span>. While wealthy districts receive automated cures and infinite resources, your sector is being systematically de-prioritized.
+          </p>
+          <p class="text-slate-300 leading-relaxed">
+            Navigate <span class="neon-pink font-bold">100 zones</span>, stabilize critical patients, and survive long enough to uncover why the system is failing on purpose. Every decision costs <span class="text-yellow-400">Time Tokens</span>. When a zone reaches <span class="neon-red font-bold">Hazard Level 5</span>, it's not rescued—it's <span class="neon-red font-bold">SEALED</span>.
+          </p>
         </div>
-        <div class="border border-red-600/50 bg-red-900/10 p-4 rounded text-center">
-          <p class="text-xs text-red-400 uppercase tracking-wider mb-1">Environmental</p>
-          <p id="env-hazard" class="text-lg font-bold text-red-400">SMOKE_INHALATION</p>
+        
+        <!-- CTA Button -->
+        <div class="mb-16">
+          <a href="scenes/zones_0.html" class="cta-button inline-block rounded-lg title-font">
+            <i data-lucide="play" class="inline-block w-5 h-5 mr-2 -mt-1"></i>
+            Enter the Waste Zones
+          </a>
+          <p class="text-xs text-slate-500 mt-4 uppercase tracking-wider">
+            <i data-lucide="alert-triangle" class="inline-block w-3 h-3"></i>
+            Warning: Resources Limited • System Oversight Active
+          </p>
         </div>
-        <div class="border border-pink-600/50 bg-pink-900/10 p-4 rounded text-center">
-          <p class="text-xs text-pink-400 uppercase tracking-wider mb-1">Proximity Alert</p>
-          <p id="env-proximity" class="text-lg font-bold neon-pink">CLEAR</p>
-        </div>
-      </section>
-
-      <!-- NPCs/Companions -->
-      <section class="w-full max-w-3xl mb-10">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-3">ZONE OCCUPANTS</h2>
-        <div id="npc-list" class="space-y-2">
-          <div class="border border-slate-600 bg-black/40 p-4 rounded flex justify-between items-center">
-            <div>
-              <p class="font-bold text-pink-300">Dr. Kovacs</p>
-              <p class="text-xs text-slate-400">Rogue Researcher • Seeking Hazmat Repairs</p>
+        
+      </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="relative py-20 px-6 border-t border-violet-600/30">
+      <div class="max-w-6xl mx-auto">
+        
+        <h2 class="title-font text-4xl font-bold text-center neon-violet mb-12">
+          SYSTEM FEATURES
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Feature 1: Resource Management -->
+          <div class="feature-card rounded-lg p-6">
+            <div class="mb-4">
+              <i data-lucide="hourglass" class="w-12 h-12 neon-violet"></i>
             </div>
-            <span class="text-xs bg-green-900/50 text-green-400 px-2 py-1 rounded">PRESENT</span>
+            <h3 class="text-xl font-bold text-violet-300 mb-3">Time Tokens</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Every movement and major action costs Time Tokens. When you run out, the system declares your zone a failure. Manage your time wisely or watch patients die.
+            </p>
           </div>
-        </div>
-      </section>
-
-      <!-- Dynamic Action Buttons -->
-      <section id="action-area" class="w-full max-w-2xl flex flex-col items-center space-y-3 mb-10">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-2">AVAILABLE ACTIONS</h2>
-        <div class="grid grid-cols-2 gap-3 w-full">
-          <button class="action-button" onclick="handleAction('inspect')">
-            <i data-lucide="eye" class="w-4 h-4"></i> Inspect Surroundings
-          </button>
-          <button class="action-button" onclick="handleAction('commune')">
-            <i data-lucide="user" class="w-4 h-4"></i> Commune: Dr. Kovacs
-          </button>
-          <button class="action-button" onclick="handleAction('contrive')">
-            <i data-lucide="wrench" class="w-4 h-4"></i> Contrive Item
-          </button>
-          <button class="action-button" onclick="handleAction('hazard_check')">
-            <i data-lucide="zap" class="w-4 h-4"></i> Hazard Check (DC13)
-          </button>
-        </div>
-      </section>
-
-      <!-- Inventory Preview -->
-      <section class="w-full max-w-2xl mb-10">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-2">INVENTORY</h2>
-        <div id="inventory-list" class="grid grid-cols-2 gap-2">
-          <div class="bg-slate-800/50 border border-slate-700 p-3 rounded text-xs">
-            <p class="font-bold text-pink-300">Faulty Sequencer Part</p>
-            <p class="text-slate-500">qty: 1</p>
+          
+          <!-- Feature 2: Hazard System -->
+          <div class="feature-card rounded-lg p-6">
+            <div class="mb-4">
+              <i data-lucide="alert-triangle" class="w-12 h-12 neon-red"></i>
+            </div>
+            <h3 class="text-xl font-bold text-red-400 mb-3">Hazard Levels</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Each zone has a Hazard Level from 0-5. Environmental dangers, failed checks, and time pressure increase the hazard. At Level 5, the zone is permanently sealed.
+            </p>
           </div>
-          <div class="bg-slate-800/50 border border-slate-700 p-3 rounded text-xs">
-            <p class="font-bold text-violet-300">Salvaged Circuit Board</p>
-            <p class="text-slate-500">qty: 2</p>
+          
+          <!-- Feature 3: Credit System -->
+          <div class="feature-card rounded-lg p-6">
+            <div class="mb-4">
+              <i data-lucide="coins" class="w-12 h-12 neon-pink"></i>
+            </div>
+            <h3 class="text-xl font-bold text-pink-400 mb-3">ARP Credits</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Use ARP Credits to bypass lockdowns, buy priority equipment, or bribe the Systemic Overseer. In Krebsville, money doesn't buy happiness—it buys survival.
+            </p>
           </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- ============ HUD BOTTOM (CONSOLE) ============ -->
-    <footer class="hud-bottom border-t border-violet-700 bg-gradient-to-t from-black to-black/60 z-20">
-      <!-- Console Output -->
-      <div id="console" class="console-text text-xs overflow-y-auto mb-3" style="max-height: 120px; min-height: 60px;">
-        <div class="console-message">
-          <span class="text-pink-400">[SYSTEM]</span> <span class="text-slate-300">Welcome to the Genetic Sequencing Hub, Dr. Grant. The vents hum with danger. What will you do?</span>
-        </div>
-        <div class="console-message mt-1">
-          <span class="text-violet-400">[ENV_SCAN]</span> <span class="text-slate-300">Hazard baseline: 4/5. Smoke inhalation risk. Equipment integrity: 60%.</span>
+          
+          <!-- Feature 4: Decision Making -->
+          <div class="feature-card rounded-lg p-6">
+            <div class="mb-4">
+              <i data-lucide="git-branch" class="w-12 h-12 text-cyan-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-cyan-300 mb-3">Branching Choices</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Save the patient or scavenge for supplies? Trust the automaton or take the risk? Every choice has consequences that ripple through the narrative.
+            </p>
+          </div>
+          
+          <!-- Feature 5: Skill Checks -->
+          <div class="feature-card rounded-lg p-6">
+            <div class="mb-4">
+              <i data-lucide="zap" class="w-12 h-12 text-yellow-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-yellow-300 mb-3">Skill Checks</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Tech, Medical, and Social skill checks determine success or failure. Roll the dice and hope the system isn't rigged against you (spoiler: it is).
+            </p>
+          </div>
+          
+          <!-- Feature 6: Environmental Effects -->
+          <div class="feature-card rounded-lg p-6">
+            <div class="mb-4">
+              <i data-lucide="cloud-fog" class="w-12 h-12 text-slate-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-300 mb-3">Environmental Effects</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Darkness, static discharge, smoke inhalation—each zone has unique environmental hazards that affect your actions and visibility.
+            </p>
+          </div>
+          
         </div>
       </div>
-      
-      <!-- Console Input -->
-      <form id="console-input-form" class="flex gap-2" onsubmit="handleConsoleInput(event)">
-        <input 
-          type="text" 
-          id="console-input" 
-          placeholder="Type command (e.g., examine equipment, move south, contrive)" 
-          autocomplete="off"
-          class="flex-grow bg-black/60 border border-violet-700 px-4 py-2 text-pink-100 rounded-l focus:outline-none focus:ring focus:ring-violet-600 focus:border-transparent text-xs" 
-        />
-        <button type="submit" class="action-button rounded-r border-0">
-          <i data-lucide="send" class="w-4 h-4"></i> Send
-        </button>
-      </form>
+    </section>
+    
+    <!-- Game Stats Preview -->
+    <section class="relative py-20 px-6 border-t border-violet-600/30">
+      <div class="max-w-4xl mx-auto">
+        
+        <h2 class="title-font text-4xl font-bold text-center neon-pink mb-4">
+          YOUR MISSION
+        </h2>
+        <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
+          Starting Resources for Dr. Grant
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="bg-black/40 border border-violet-600/40 rounded-lg p-6 text-center">
+            <div class="mb-2">
+              <i data-lucide="target" class="w-8 h-8 neon-violet mx-auto"></i>
+            </div>
+            <p class="text-xs uppercase text-slate-500 mb-1">Zones to Stabilize</p>
+            <p class="text-4xl font-bold neon-violet">100</p>
+          </div>
+          
+          <div class="bg-black/40 border border-yellow-600/40 rounded-lg p-6 text-center">
+            <div class="mb-2">
+              <i data-lucide="hourglass" class="w-8 h-8 text-yellow-400 mx-auto"></i>
+            </div>
+            <p class="text-xs uppercase text-slate-500 mb-1">Starting Time Tokens</p>
+            <p class="text-4xl font-bold text-yellow-400">39</p>
+          </div>
+          
+          <div class="bg-black/40 border border-pink-600/40 rounded-lg p-6 text-center">
+            <div class="mb-2">
+              <i data-lucide="coins" class="w-8 h-8 neon-pink mx-auto"></i>
+            </div>
+            <p class="text-xs uppercase text-slate-500 mb-1">Starting ARP Credits</p>
+            <p class="text-4xl font-bold neon-pink">3,480</p>
+          </div>
+          
+        </div>
+        
+        <div class="mt-12 text-center">
+          <p class="text-slate-400 italic">
+            "In Krebsville, the clock is always ticking. The system is always watching. And equality was never part of the algorithm."
+          </p>
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="relative py-12 px-6 border-t border-violet-600/30">
+      <div class="max-w-6xl mx-auto">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          
+          <!-- About -->
+          <div>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-violet-400 mb-3">About the Game</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-2">
+              <strong class="text-slate-300">Krebsville Nights: Unequal Treatment</strong> is a text-based medical noir RPG that explores themes of systemic inequality, resource scarcity, and the dehumanization of algorithmic healthcare.
+            </p>
+            <p class="text-slate-500 text-xs">
+              Version 1.1.0 | COSINE MUD System
+            </p>
+          </div>
+          
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-violet-400 mb-3">Documentation</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="docs/game_manual.md" class="text-slate-400 hover:text-violet-400 transition-colors flex items-center">
+                  <i data-lucide="book-open" class="w-4 h-4 mr-2"></i>
+                  Game Manual
+                </a>
+              </li>
+              <li>
+                <a href="docs/mechanics.md" class="text-slate-400 hover:text-violet-400 transition-colors flex items-center">
+                  <i data-lucide="settings" class="w-4 h-4 mr-2"></i>
+                  Game Mechanics
+                </a>
+              </li>
+              <li>
+                <a href="docs/zones.md" class="text-slate-400 hover:text-violet-400 transition-colors flex items-center">
+                  <i data-lucide="map" class="w-4 h-4 mr-2"></i>
+                  Zone Guide
+                </a>
+              </li>
+              <li>
+                <a href="README.md" class="text-slate-400 hover:text-violet-400 transition-colors flex items-center">
+                  <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
+                  README
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        
+        <!-- Copyright -->
+        <div class="border-t border-slate-800 pt-8 text-center">
+          <p class="text-xs text-slate-600">
+            &copy; 2026 Krebsville Nights. A COSINE MUD Production.
+          </p>
+          <p class="text-xs text-slate-700 mt-2">
+            <i data-lucide="alert-circle" class="inline-block w-3 h-3"></i>
+            This is a work of fiction. Any resemblance to actual healthcare systems is purely coincidental... or is it?
+          </p>
+        </div>
+        
+      </div>
     </footer>
-
-    <!-- ============ CRT SCANLINE OVERLAY ============ -->
-    <div class="pointer-events-none fixed inset-0 z-50" style="mix-blend-mode: screen; opacity: 0.03;">
-      <div id="scanlines" class="absolute w-full h-full" style="
-        background: repeating-linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.15),
-          rgba(0, 0, 0, 0.15) 1px,
-          transparent 1px,
-          transparent 2px
-        );
-        pointer-events: none;
-      "></div>
-    </div>
-
+    
   </div>
-
-  <!-- ============ SCRIPTS ============ -->
+  
+  <!-- Scripts -->
   <script>
-    // Initialize Lucide icons when DOM is ready
+    // Initialize Lucide icons
     document.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
-      console.log('[INIT] Krebsville Nights COSINE MUD initialized.');
+      console.log('[SYSTEM] Krebsville Nights Landing Page initialized.');
     });
-
-    // Placeholder action handler
-    function handleAction(action) {
-      console.log('Action triggered:', action);
-      addConsoleMessage(`[ACTION] Executing: ${action.toUpperCase()}`);
-    }
-
-    // Placeholder console input handler
-    function handleConsoleInput(event) {
-      event.preventDefault();
-      const input = document.getElementById('console-input');
-      const command = input.value.trim();
-      
-      if (!command) return;
-      
-      addConsoleMessage(`[PLAYER] ${command}`);
-      input.value = '';
-      
-      // Process command via engine.js
-      if (window.processCommand) {
-        window.processCommand(command);
-      }
-    }
-
-    // Helper function to add message to console
-    function addConsoleMessage(message, type = 'system') {
-      const console_el = document.getElementById('console');
-      const msg_div = document.createElement('div');
-      msg_div.className = 'console-message mt-1';
-      msg_div.innerHTML = `<span class="text-slate-300">${message}</span>`;
-      console_el.appendChild(msg_div);
-      console_el.scrollTop = console_el.scrollHeight;
-    }
   </script>
-
-  <!-- Load main game engine -->
-  <script src="engine.js" defer></script>
-
+  
 </body>
 </html>
