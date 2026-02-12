@@ -1,0 +1,492 @@
+/**
+ * styles.css - COSINE MUD Box: Krebsville Nights
+ * Aesthetic: Medical-noir, CRT-terminal, violet/pink neon
+ * Organization: contrivancecompanychicago
+ */
+
+/* ============ BASE STYLES ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0e27;
+  color: #e0e6ff;
+  font-family: 'Courier New', monospace;
+  overflow-x: hidden;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+}
+
+/* ============ CRT SCANLINES EFFECT ============ */
+#scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+}
+
+/* ============ NEON GLOW EFFECTS ============ */
+.neon-violet {
+  color: #a733c2 !important;
+  text-shadow:
+    0 0 10px #a733c2,
+    0 0 20px #a733c2,
+    0 0 30px #47147e,
+    0 0 40px rgba(167, 51, 194, 0.5);
+  font-weight: bold;
+}
+
+.neon-pink {
+  color: #ec4899 !important;
+  text-shadow:
+    0 0 10px #ec4899,
+    0 0 20px #ec4899,
+    0 0 30px #9b174f,
+    0 0 40px rgba(236, 72, 153, 0.5);
+  font-weight: bold;
+}
+
+/* HUD stats glow */
+.hud-stat {
+  text-shadow: 0 0 8px rgba(167, 51, 194, 0.8), 0 0 16px rgba(236, 72, 153, 0.5);
+  transition: text-shadow 0.3s ease;
+}
+
+/* CRT shadow effect for console and descriptions */
+.crt-shadow {
+  text-shadow: 0 0 4px #a733c2, 0 0 2px #ec4899;
+}
+
+/* ============ HAZARD LEVEL GLITCH EFFECT ============ */
+@keyframes hazardGlitch {
+  0% {
+    background-color: inherit;
+    color: #e0e6ff;
+    filter: none;
+  }
+  15% {
+    background-color: #f87171;
+    color: #fff;
+    filter: blur(0.5px);
+    letter-spacing: 0.09em;
+  }
+  30% {
+    background-color: #0a0e27;
+    color: #a733c2;
+    filter: blur(0.9px) saturate(1.2);
+    transform: translate(1px, -1px);
+  }
+  50% {
+    background-color: #0a0e27;
+    color: #ec4899;
+    filter: blur(0.5px);
+    transform: translate(-1px, 1px);
+  }
+  70% {
+    background-color: #f87171;
+    color: #fff;
+    filter: blur(0.7px);
+  }
+  100% {
+    background-color: inherit;
+    color: #e0e6ff;
+    filter: none;
+    transform: translate(0, 0);
+  }
+}
+
+.hazard-critical {
+  animation: hazardGlitch 0.3s linear infinite;
+  border-radius: 3px;
+  padding: 2px 4px;
+}
+
+/* ============ CONSOLE STYLING ============ */
+#console {
+  max-height: 120px;
+  min-height: 60px;
+  overflow-y: auto;
+  background: rgba(10, 14, 39, 0.8);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.console-message {
+  animation: fadeInConsole 0.55s cubic-bezier(0.33, 0.33, 0.66, 1);
+  padding: 6px 10px;
+  margin: 4px 0;
+  background: rgba(167, 51, 194, 0.06);
+  border-left: 2px solid #a733c2;
+  font-size: 0.93rem;
+  font-family: 'Courier New', monospace;
+  color: #e0e6ff;
+  border-radius: 2px;
+}
+
+@keyframes fadeInConsole {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ ACTION BUTTONS ============ */
+.action-button {
+  background: linear-gradient(135deg, #a733c2 0%, #ec4899 100%);
+  border: 1px solid #ec4899;
+  color: #fff;
+  padding: 8px 18px;
+  margin: 4px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.15s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  box-shadow: 
+    0 0 8px rgba(167, 51, 194, 0.25),
+    0 0 16px rgba(236, 72, 153, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.action-button:hover {
+  background: linear-gradient(135deg, #ec4899 0%, #a733c2 100%);
+  box-shadow: 
+    0 0 16px #ec4899,
+    0 0 24px rgba(236, 72, 153, 0.4);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.action-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.action-button:focus {
+  outline: 2px solid #a733c2;
+  outline-offset: 2px;
+}
+
+/* Button icon styling */
+.action-button i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+/* ============ HUD STYLING ============ */
+.hud-top {
+  backdrop-filter: blur(3px);
+  background: linear-gradient(
+    180deg,
+    rgba(10, 14, 39, 0.95) 0%,
+    rgba(10, 14, 39, 0.85) 100%
+  );
+  border-bottom: 1px solid #a733c2;
+  box-shadow: 0 4px 12px rgba(167, 51, 194, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.hud-bottom {
+  backdrop-filter: blur(3px);
+  background: linear-gradient(
+    180deg,
+    rgba(10, 14, 39, 0.85) 0%,
+    rgba(10, 14, 39, 0.95) 100%
+  );
+  border-top: 1px solid #ec4899;
+  box-shadow: 0 -4px 12px rgba(236, 72, 153, 0.15);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 20px;
+  z-index: 20;
+  max-height: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============ GAME MAIN CONTENT ============ */
+.game-main {
+  margin-top: 100px;
+  margin-bottom: 240px;
+  padding: 20px;
+  min-height: calc(100vh - 340px);
+  overflow-y: auto;
+}
+
+#zone-title {
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-bottom: 8px;
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px #a733c2, 0 0 20px #a733c2;
+  }
+  50% {
+    text-shadow: 0 0 20px #a733c2, 0 0 40px #ec4899, 0 0 60px #a733c2;
+  }
+}
+
+#zone-desc {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+/* Environmental status boxes */
+.bg-violet-900\/10 {
+  background: rgba(88, 28, 135, 0.1) !important;
+}
+.bg-red-900\/10 {
+  background: rgba(127, 29, 29, 0.1) !important;
+}
+.bg-pink-900\/10 {
+  background: rgba(131, 24, 67, 0.1) !important;
+}
+
+/* ============ INVENTORY STYLING ============ */
+#inventory-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.inventory-item {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid #475569;
+  padding: 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.inventory-item:hover {
+  background: rgba(71, 85, 105, 0.3);
+  border-color: #a733c2;
+  box-shadow: 0 0 12px rgba(167, 51, 194, 0.2);
+}
+
+/* ============ SCROLLBAR STYLING ============ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1729;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a733c2, #ec4899);
+  border-radius: 5px;
+  border: 2px solid #0a0e27;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ec4899, #a733c2);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #a733c2 #0f1729;
+  scrollbar-width: thin;
+}
+
+/* ============ INPUT STYLING ============ */
+input[type="text"],
+textarea {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #a733c2;
+  color: #ec4899;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 12px rgba(236, 72, 153, 0.3);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 1024px) {
+  .game-main {
+    padding: 16px;
+  }
+
+  #zone-title {
+    font-size: 2rem;
+  }
+
+  .action-button {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-main {
+    margin-top: 120px;
+    margin-bottom: 260px;
+    padding: 12px;
+  }
+
+  #zone-title {
+    font-size: 1.5rem;
+  }
+
+  #zone-desc {
+    font-size: 0.95rem;
+  }
+
+  .hud-top {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .hud-stat {
+    font-size: 0.85rem;
+  }
+
+  #action-area {
+    width: 100% !important;
+  }
+
+  #inventory-list {
+    grid-template-columns: 1fr;
+  }
+
+  .action-button {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 12px;
+  }
+
+  #console {
+    font-size: 0.85rem;
+  }
+
+  .console-message {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    letter-spacing: 0.01em;
+  }
+
+  .hud-top,
+  .hud-bottom {
+    padding: 8px 12px;
+  }
+
+  #zone-title {
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+  }
+
+  #zone-desc {
+    font-size: 0.9rem;
+  }
+
+  .action-button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    margin: 2px;
+  }
+
+  .action-button i {
+    width: 14px;
+    height: 14px;
+  }
+
+  #console {
+    max-height: 100px;
+    font-size: 0.8rem;
+  }
+
+  #hud-timeTokens,
+  #hud-credits,
+  #hud-hazardLevel {
+    display: inline-block;
+  }
+}
+
+/* ============ ANIMATION UTILITIES ============ */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideInUp 0.5s ease-out;
+}
+
+/* ============ PRINT STYLES ============ */
+@media print {
+  .hud-top,
+  .hud-bottom {
+    display: none;
+  }
+
+  .game-main {
+    margin: 0;
+    padding: 0;
+  }
+}
