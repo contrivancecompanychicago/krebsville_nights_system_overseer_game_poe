@@ -10,3 +10,12 @@ firebase::database::DatabaseReference db_ref = database->GetReference("players/d
 void UpdateCredits(int new_credits) {
     db_ref.Child("stats/credits").SetValue(new_credits);
 }
+#import <BugsnagCocos2dx/cocoa/Bugsnag.h>
+#import <BugsnagCocos2dx/cocoa/BugsnagCocos2dxPlugin.h>
+
+int main(int argc, char *argv[])
+{
+    [BugsnagCocos2dxPlugin registerWithCocos2dVersion:cocos2d::cocos2dVersion()];
+    [Bugsnag startBugsnagWithApiKey:@"0466c2202771ae3b42bfd95b04570fa7"];
+    // ...
+}
